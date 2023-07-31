@@ -1,5 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Providers } from './GlobalRedux/provider'
+import { useContext } from 'react'
+import Navbar from '@/components/global-components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,9 +12,13 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pl">
+      <body className={inter.className}> <Providers><Navbar/><div className="container pt-28"> {children} </div></Providers> </body>
     </html>
+
   )
 }
+
+{/* <div id="portal"></div> */}
