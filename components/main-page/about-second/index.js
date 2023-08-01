@@ -1,9 +1,9 @@
 import React from 'react'
 import MobileCard from '../mibile-card';
 
-const AboutFirst = () => {
+const AboutSecond = () => {
   return (
-<section className="grid grid-cols-2 gap-6 mt-28 mx-28">
+<section className="grid grid-cols-2 gap-6 mt-28 mx-28 bg-gray-300">
 <MobileCard/>
 <div>
     <h2 className="text-4xl">My career in equestrian sports</h2>
@@ -17,4 +17,4 @@ const AboutFirst = () => {
   )
 }
 
-export default AboutFirst;
+export default AboutSecond;

@@ -1,5 +1,6 @@
 import CartView from '@/components/CartView'
 import AboutFirst from '@/components/main-page/about-first'
+import AboutSecond from '@/components/main-page/about-second'
 import ContactCta from '@/components/main-page/contact-cta'
 import HeroSection from '@/components/main-page/hero-section'
 import HorsesIntroSection from '@/components/main-page/horses-intro-section'
@@ -51,6 +52,9 @@ export default async function Home() {
 <NewsSection/>
 {/* <HorsesIntroSection/> */}
 
+<AboutFirst/>
+<AboutSecond/>
+<AboutFirst/>
 <AboutFirst/>
 
 <OfferSection/>
