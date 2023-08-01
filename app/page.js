@@ -49,7 +49,7 @@ export default async function Home() {
 
 {/* <TestimonialsCarousel/> */}
 <NewsSection/>
-<HorsesIntroSection/>
+{/* <HorsesIntroSection/> */}
 
 <AboutFirst/>
 
