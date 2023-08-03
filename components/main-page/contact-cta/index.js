@@ -1,3 +1,4 @@
+import ButtonLg from '@/components/global-components/buttton-lg';
 import React from 'react'
 
 const ContactCta = () => {
@@ -8,7 +9,7 @@ const ContactCta = () => {
 <h1 className="text-6xl">Get acquainted with our future equestrian sport stars</h1>
 <p >All horses for sale - feel free to contact us!</p>
 </div>
-<button>Contact</button>
+<ButtonLg>Contact</ButtonLg>
 </div>
         </section>
   )

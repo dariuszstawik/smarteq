@@ -1,3 +1,4 @@
+import CardButton from '@/components/global-components/card-button';
 import React from 'react'
 
 const NewsCard = () => {
@@ -8,7 +9,8 @@ const NewsCard = () => {
         <div className="p-4 flex flex-col">
             <h3 className="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h3>
             <p className="text-sm text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            <button className="w-1/3 ml-auto bg-slate-700 text-white text-sm font-semibold px-4 py-2 rounded-lg mt-4">Read more</button>
+            {/* <button className="w-1/3 ml-auto bg-slate-700 text-white text-sm font-semibold px-4 py-2 rounded-lg mt-4">Read more</button> */}
+            <CardButton className="w-1/3 ml-auto">Read more</CardButton>
         </div>
     </div>
 

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Providers } from './GlobalRedux/provider'
 import { useContext } from 'react'
 import Navbar from '@/components/global-components/navbar'
+import Footer from '@/components/global-components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="pl">
-      <body className={inter.className}> <Providers><Navbar/><div className="container pt-28"> {children} </div></Providers> </body>
+      <body className={inter.className}> <Providers><Navbar/><div className="container pt-28"> {children} </div><Footer/></Providers> </body>
     </html>
 
   )

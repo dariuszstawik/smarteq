@@ -1,16 +1,13 @@
 import CartView from '@/components/CartView'
 import AboutFirst from '@/components/main-page/about-first'
 import AboutSecond from '@/components/main-page/about-second'
+import BusinessOfferSection from '@/components/main-page/business-offer-section'
 import ContactCta from '@/components/main-page/contact-cta'
 import HeroSection from '@/components/main-page/hero-section'
-import HorsesIntroSection from '@/components/main-page/horses-intro-section'
-import MobileCard from '@/components/main-page/mibile-card'
+import HorsesToSell from '@/components/main-page/horses-to-sell'
 import NewsSection from '@/components/main-page/news-section'
-import NewsCard from '@/components/main-page/news-section/news-card'
 import OfferSection from '@/components/main-page/offer-section'
 import Modal from '@/components/modal'
-import ProductCard from '@/components/product-card'
-import TestimonialsCarousel from '@/components/testimonials'
 import React from 'react'
 import Stripe from 'stripe'
 
@@ -46,19 +43,17 @@ export default async function Home() {
 <div>Cart</div>
 <CartView/> */}
 <HeroSection/>
-
-
-{/* <TestimonialsCarousel/> */}
 <NewsSection/>
-{/* <HorsesIntroSection/> */}
-
+<OfferSection/>
 <AboutFirst/>
 <AboutSecond/>
 <AboutFirst/>
 <AboutFirst/>
 
-<OfferSection/>
+
+<BusinessOfferSection/>
 <ContactCta/>
+<HorsesToSell/>
 
 
 {/* <div id="portal"></div> */}

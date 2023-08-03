@@ -11,8 +11,6 @@ const AboutFirst = () => {
         <p>I pass on the ecquired knowledge and professional experience to younger and older riding students. I teach them how to approach equestrianism and what competition is all about. I pay attention to thinking while working with a horse and open their minds to the bigger picture of horse training. I pass on to my students techniques taken from the best German riders and trainers. My students reach good results at regional competitions and expand their level by taking horses into training or working with young horses.</p>
 </div>
 </div>
-
-
     </section>
   )
 }
