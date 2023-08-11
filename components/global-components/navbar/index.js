@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-28 flex justify-between items-center px-4 lg:px-16 py-4 bg-white top-0 left-0 z-30">
+    <div className="fixed w-full h-28 flex justify-between items-center px-4 lg:px-16 py-4 bg-white top-0 left-0 z-40">
       <Logo closeMobileMenu={closeMobileMenu} />
       <div className="pl-16 w-full flex justify-end content-center items-center gap-6">
         <ul

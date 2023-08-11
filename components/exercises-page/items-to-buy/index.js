@@ -1,4 +1,3 @@
-import ButtonLg from "@/components/global-components/buttton-lg";
 import BuyButton from "@/components/global-components/buy-button";
 import MobileCard from "@/components/main-page/mibile-card";
 import React from "react";

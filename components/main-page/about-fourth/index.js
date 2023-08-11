@@ -1,21 +1,26 @@
 import React from "react";
 import MobileCard from "../mibile-card";
 
-const AboutFirst = () => {
+const AboutFourth = () => {
   return (
-    <div className="w-full">
+    <div className="relative w-full bg-smartGray">
+      <img
+        src="/asset-about2bg.svg"
+        alt="asset"
+        className="absolute bottom-6 right-24"
+      />
       <section className="container mx-auto">
         <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-28 py-28 mx-auto">
           <div className="max-w-[400px] -translate-y-[105px]">
             <img
-              src="/asset-about1.svg"
+              src="/asset-about4phone.svg"
               alt="asset"
-              className="ml-auto translate-x-4"
+              className="ml-auto translate-x-6 translate-y-[55%]"
             />
             <MobileCard />
           </div>
-          <div>
-            <h2 className="p-4 text-4xl font-semibold">
+          <div className="translate-y-[75px]">
+            <h2 className="p-4 text-4xl font-bold">
               My career in equestrian sports2
             </h2>
             <div className="bg-white p-4 rounded-2xl mt-4">
@@ -38,4 +43,4 @@ const AboutFirst = () => {
   );
 };
 
-export default AboutFirst;
+export default AboutFourth;
