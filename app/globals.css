@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @font-face {
     font-family: 'SourceSerifVariable-Roman';
     src: url('/SourceSerifVariable-Roman.otf') format('opentype');
@@ -14,3 +15,11 @@
   body {
     font-family: 'SourceSerifVariable-Roman', sans-serif;
   }
+
+  /* .isRequired {
+    @apply after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px];
+  }
+
+  .isRequired::after {
+    @apply content-['*'] text-smartOrange absolute -right-[10px] -top-[2px];
+  } */

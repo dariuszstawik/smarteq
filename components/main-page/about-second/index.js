@@ -3,7 +3,7 @@ import MobileCard from "../mibile-card";
 
 const AboutSecond = () => {
   return (
-    <div className="relative w-full bg-smartGray">
+    <div className="relative w-full xl:h-[calc(100vh-112px)] bg-smartGray">
       <img
         src="/asset-about2bg.svg"
         alt="asset"

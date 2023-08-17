@@ -18,19 +18,19 @@ import Slider from "@/components/slider/slider";
 import React from "react";
 import Stripe from "stripe";
 
-async function getStripeProducts() {
-  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
-    apiVersion: "2020-08-27",
-  });
-  const res = await stripe.prices.list({
-    expand: ["data.product"],
-  });
-  const prices = res.data;
-  return prices;
-}
+// async function getStripeProducts() {
+//   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
+//     apiVersion: "2020-08-27",
+//   });
+//   const res = await stripe.prices.list({
+//     expand: ["data.product"],
+//   });
+//   const prices = res.data;
+//   return prices;
+// }
 
 export default async function Home() {
-  const products = await getStripeProducts();
+  // const products = await getStripeProducts();
 
   return (
     <main>
@@ -46,10 +46,7 @@ export default async function Home() {
 <div>Cart</div>
 <CartView/> */}
         <HeroSection />
-        <InstagramSection />
-
         <NewsSection />
-        <Slider />
         <OfferSection />
         <AboutFirst />
         <AboutSecond />

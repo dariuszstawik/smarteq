@@ -4,17 +4,18 @@ import React from "react";
 
 const OfferSection = () => {
   return (
-    <section className="container mx-auto h-[calc(100vh-112px)]">
+    <section className="container mx-auto h-[calc(100vh-112px)] mt-28">
       <div className="bg-[url('/offer-img.svg')] w-full h-full bg-contain bg-center bg-no-repeat mx-auto ">
         <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 gap-6 place-content-center">
           <div className="relative flex flex-col w-full items-end">
-            <div classname="flex flex-col justify-end borde">
-              <div className="h-[292px] w-1/2 flex flex-col place-content-end">
+            <div classname="flex flex-col justify-end">
+              <div className="h-[292px] w-1/2">
                 <img
                   src="asset-dots.svg"
                   alt="asset-dots"
                   width="147px"
                   height="129px"
+                  className=""
                 />
               </div>
               <ButtonLg isOrange className="mr-28">
@@ -26,7 +27,7 @@ const OfferSection = () => {
               alt="woman graphic"
               width="113px"
               height="196px"
-              className="self-start ml-24"
+              className="self-start ml-32"
             />
           </div>
 
@@ -49,7 +50,7 @@ const OfferSection = () => {
               alt="asset-circle"
               width="155px"
               height="137px"
-              className="absolute top-[26%] right-0"
+              className="absolute top-[26%] right-20"
             />
           </div>
 
