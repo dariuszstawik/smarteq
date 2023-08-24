@@ -14,12 +14,32 @@
 
   body {
     font-family: 'SourceSerifVariable-Roman', sans-serif;
+    @apply text-xl;
   }
 
-  /* .isRequired {
-    @apply after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px];
+  @layer base {
+    #__next {
+      @apply contents;
+    }
+  
+    html {
+      @apply h-full scroll-smooth antialiased;
+    }
+
+    h2 {
+      @apply text-2xl font-bold;
+    }
+
   }
 
-  .isRequired::after {
-    @apply content-['*'] text-smartOrange absolute -right-[10px] -top-[2px];
+
+
+  /* @layer base {
+    .container {
+      @apply mx-auto, px-4;
+    }
+    .isRequired {
+      @apply text-red-500, text-xs, font-bold;
+  
+    }
   } */

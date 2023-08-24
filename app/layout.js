@@ -1,11 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import { Providers } from "./GlobalRedux/provider";
-import { useContext } from "react";
 import Navbar from "@/components/global-components/navbar";
 import Footer from "@/components/global-components/footer";
-
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +11,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      {/* <body className={inter.className}> */}
       <body>
         {" "}
         <Providers>

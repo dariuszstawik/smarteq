@@ -1,9 +1,12 @@
 import React from "react";
 import MobileCard from "../mibile-card";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-const AboutFirst = () => {
+const AboutFirst = ({ about1 }) => {
+  console.log("about1 about first " + about1);
+  console.log(about1);
   return (
-    <div className="w-full">
+    <div className="w-full" id="aboutSection">
       <section className="container mx-auto">
         <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-28 py-28 mx-auto">
           <div className="max-w-[400px] -translate-y-[105px]">
@@ -14,22 +17,12 @@ const AboutFirst = () => {
             />
             <MobileCard />
           </div>
-          <div>
+          <div className="max-w-2xl">
             <h2 className="p-4 text-4xl font-semibold">
-              My career in equestrian sports2
+              {about1.fields.title}
             </h2>
             <div className="bg-white p-4 rounded-2xl mt-4">
-              <div>
-                I pass on the ecquired knowledge and professional experience to
-                younger and older riding students. I teach them how to approach
-                equestrianism and what competition is all about. I pay attention
-                to thinking while working with a horse and open their minds to
-                the bigger picture of horse training. I pass on to my students
-                techniques taken from the best German riders and trainers. My
-                students reach good results at regional competitions and expand
-                their level by taking horses into training or working with young
-                horses.
-              </div>
+              <div>{documentToReactComponents(about1.fields.content)}</div>
             </div>
           </div>
         </div>

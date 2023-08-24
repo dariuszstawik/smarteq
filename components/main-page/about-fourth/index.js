@@ -7,7 +7,7 @@ const AboutFourth = () => {
       <img
         src="/asset-about2bg.svg"
         alt="asset"
-        className="absolute bottom-6 right-24"
+        className="absolute w-32 bottom-6 right-24"
       />
       <section className="container mx-auto">
         <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-28 py-28 mx-auto">
@@ -15,11 +15,12 @@ const AboutFourth = () => {
             <img
               src="/asset-about4phone.svg"
               alt="asset"
-              className="ml-auto translate-x-6 translate-y-[55%]"
+              width="180px"
+              className="ml-44 translate-y-[55%]"
             />
             <MobileCard />
           </div>
-          <div className="translate-y-[75px]">
+          <div className="translate-y-[75px] max-w-2xl">
             <h2 className="p-4 text-4xl font-bold">
               My career in equestrian sports2
             </h2>

@@ -1,7 +1,5 @@
-"use client"
+"use client";
 
 export default function Error() {
-    return(
-        <div>Something went wrong...</div>
-    )
+  return <div>Strona nie istnieje...</div>;
 }

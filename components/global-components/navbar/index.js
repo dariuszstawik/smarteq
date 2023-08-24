@@ -1,9 +1,24 @@
 "use client";
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Logo from "../logo";
 import Hamburger from "../hamburger";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
+
+  const [isHomePage, setIsHomePage] = useState(true);
+
+  useEffect(() => {
+    console.log(router.pathname);
+    if (router.pathname === "/") {
+      setIsHomePage(true);
+    } else {
+      setIsHomePage(false);
+    }
+  }, [router.pathname]);
+
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -12,6 +27,16 @@ const Navbar = () => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuActive(false);
+  };
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -29,16 +54,29 @@ const Navbar = () => {
             Offer
           </li>
           <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
-            About me
+            <Link
+              href="/#aboutSection"
+              onClick={(e) => {
+                closeMobileMenu();
+                isHomePage ? handleScroll(e) : "";
+              }}
+            >
+              {" "}
+              About me{" "}
+            </Link>
           </li>
           <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
-            Exercises
+            <Link href="/exercises">Exercises</Link>
           </li>
           <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
-            Horses for sale
+            <Link href="/horse-for-sale">Horses for sale</Link>
           </li>
           <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             Contact
+          </li>
+
+          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+            <Link href="/cart-page">Cart</Link>
           </li>
         </ul>
 

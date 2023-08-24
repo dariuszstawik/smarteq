@@ -1,20 +1,31 @@
-import CardButton from '@/components/global-components/card-button';
-import React from 'react'
+"use client";
+import CardButton from "@/components/global-components/card-button";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
-const NewsCard = () => {
+const NewsCard = ({ title, lead, slug, img }) => {
+  console.log(img);
   return (
-//news card that width equals 400px, rounded with standard shadow, containing full-size image, title, description and button to read more
     <div className="w-96 rounded-lg shadow-lg">
-        <img src="https://picsum.photos/400/300" alt="news" className="w-contain rounded-t-lg" />
-        <div className="p-4 flex flex-col">
-            <h3 className="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h3>
-            <p className="text-sm text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            {/* <button className="w-1/3 ml-auto bg-slate-700 text-white text-sm font-semibold px-4 py-2 rounded-lg mt-4">Read more</button> */}
-            <CardButton className="w-1/3 ml-auto">Read more</CardButton>
-        </div>
+      <Image
+        className="w-contain rounded-t-lg"
+        src={img ? `https:${img.fields.file.url}` : ""}
+        width={img?.fields?.file?.details?.image?.width}
+        height={img?.fields?.file?.details?.image?.height}
+        alt={img?.fields?.description ? img.fields.description : ""}
+      />
+      <div className="p-4 flex flex-col">
+        <h3 className="text-xl font-semibold">{title}</h3>
+        <p className="text-sm text-gray-500 mt-2">
+          {lead.length > 160 ? lead.slice(0, 160) + "..." : lead}
+        </p>
+        <CardButton className="w-1/3 ml-auto">
+          <Link href={`/blog/${slug}`}>Read more</Link>
+        </CardButton>
+      </div>
     </div>
-
-  )
-}
+  );
+};
 
 export default NewsCard;

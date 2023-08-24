@@ -14,7 +14,7 @@ const AboutThird = () => {
         <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-28 py-28 mx-auto">
           <MobileCard />
 
-          <div>
+          <div className="max-w-2xl">
             <h2 className="p-4 text-4xl font-bold">
               My career in equestrian sports2
             </h2>
