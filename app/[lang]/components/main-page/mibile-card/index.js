@@ -1,0 +1,29 @@
+"use client";
+import React from "react";
+
+const MobileCard = ({ img, graphicImgClassName, hasOrangeBorder }) => {
+  console.log("---IMG IN MOBILE CARD---");
+  console.log(img);
+  return (
+    <div className="relative">
+      {hasOrangeBorder && (
+        <div className="absolute left-7 top-7 w-[260px] h-[410px] bg-smartOrange border rounded-[10%]"></div>
+      )}
+      <div className="relative w-[260px] h-[410px] bg-white text-white border rounded-[10%]">
+        {img && (
+          <img
+            src={img}
+            alt="horse"
+            className={`min-w-full min-h-full object-cover rounded-[10%] ${graphicImgClassName}`}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default MobileCard;
+
+// w-[345px] h-[588px]
+
+// w-[260px] h-[410px]

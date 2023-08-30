@@ -1,0 +1,53 @@
+{
+    "navigation": {
+      "offer": "Offer",
+      "about": "About me",
+      "exercises": "Exercises",
+      "horsesForSale": "Horses for sale",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+
+    "heroSection": {
+      "title": "Step into the world of graphics",
+      "subtitle": "We create graphic materials for companies passionate about the equestrian world",
+      "button": "Check my exercises"
+    },
+
+      "aboutSection": {
+        "title": "About Us"
+      },
+
+      "blogSection": {
+        "title": "Latest blog posts",
+        "button": "Read more"
+      },
+
+      "equestrianOffer": {
+        "title": "Equestian offer",
+        "buttonHorses": "horses for sale",
+        "buttonExercises": "view  my exercises"
+      },
+      
+      "graphicOffer": {
+        "title": "graphic offer"
+      },
+      "horsesForSale": {
+        "title": "Horses for sale",
+        "title2": "Other horses"
+      },
+      "contact": {
+        "title": "Contact"
+      },
+      "cart": {
+        "title": "Cart",
+        "removeButton": "Remove",
+        "clearCart": "Clear cart",
+        "total": "Total Price",
+        "checkout": "Checkout",
+        "empty cart": "Your cart is empty",
+        "paragraph": "After purchasing, you will receive an e-mail with your order within 24 hours"
+      }
+
+    }
+  

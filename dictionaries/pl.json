@@ -1,0 +1,52 @@
+{
+    "navigation": {
+      "offer": "Oferta",
+      "about": "O mnie",
+      "exercises": "Ćwiczenia",
+      "horsesForSale": "Konie na sprzedaż",
+      "blog": "Blog",
+      "contact": "Kontakt"
+    },
+
+    "heroSection": {
+      "title": "Step into the world of graphics",
+      "subtitle": "We create graphic materials for companies passionate about the equestrian world",
+      "button": "Check my exercises"
+    },
+
+    "aboutSection": {
+      "title": "O nas"
+    },
+
+    "blogSection": {
+      "title": "Ostatnie wpisy na blogu",
+      "button": "czytaj więcej"
+    },
+
+    "equestrianOffer": {
+      "title": "Oferta jeździecka",
+      "buttonHorses": "konie na sprzedaż",
+      "buttonExercises": "zobacz ćwiczenia"
+    },
+
+    "graphicOffer": {
+      "title": "Oferta graficzna"
+    },
+    "horsesForSale": {
+      "title": "Konie na sprzedaż",
+      "title2": "Pozostałe konie"
+    },
+    "contact": {
+      "title": "kontakt"
+    },
+
+    "cart": {
+      "title": "Koszyk",
+      "removeButton": "Usuń",
+      "clearCart": "Wyczyść koszyk",
+      "total": "Suma",
+      "checkout": "Zamów",
+      "empty cart": "Koszyk jest pusty",
+      "paragraph": "Po opłaceniu zamówienia w ciągu 48 godzin otrzymasz e-maila z zamówionymi e-bookami."
+    }
+  }
