@@ -12,7 +12,7 @@ export default async function OfferSection({ lang }) {
       <div className="lg:bg-[url('/offer-img.svg')] w-full h-full bg-contain bg-center bg-no-repeat mx-auto ">
         <div className="w-full min-h-full lg:h-full grid grid-cols-1 lg:grid-cols-2 gap-6 place-content-center mx-auto pb-20">
           <div className="flex flex-col-reverse lg:flex-col w-full justify-center items-center">
-            <div classname="flex flex-col justify-center ">
+            <div className="flex flex-col justify-center ">
               <div className="hidden lg:block h-[292px] w-1/2 mx-auto">
                 <img
                   src="asset-dots.svg"
@@ -36,7 +36,7 @@ export default async function OfferSection({ lang }) {
           </div>
 
           <div className="relative flex flex-col w-full">
-            <div classname="flex flex-col justify-center items-center content-center">
+            <div className="flex flex-col justify-center items-center content-center">
               <div className=" mx-auto lg:mx-0 flex justify-center lg:h-[292px] w-1/2">
                 <img
                   src="horse-jumping.svg"

@@ -1,11 +1,8 @@
 import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
 import MobileCard from "../mibile-card";
 import Button from "../../global-components/buttton";
 import { client } from "@/lib/contentful/client";
-import YoutubePlayer from "../../horses-for-sale-page/youtube-player";
-import ImageGallery from "../../image-gallery";
 import { getDictionary } from "@/lib/dictionary";
 import SectionTitle from "../../global-components/section-title";
 
@@ -71,9 +68,6 @@ export default async function HorsesToSell({ lang, hasTitle }) {
             <Button>Read more</Button>
           </div>
         </div>
-        {/* <h2 className="pl-28 text-4xl font-semibold">{horsesForSale.title2}</h2>
-
-        <ImageGallery /> */}
       </section>
     </div>
   );

@@ -60,7 +60,7 @@ const ContactForm = ({ about1 }) => {
         className="relative w-1/2 mx-auto flex flex-col gap-2"
       >
         <label
-          for="firstName"
+          htmlFor="firstName"
           className="inline-block  mr-auto relative uppercase after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px]"
         >
           first name
@@ -74,7 +74,7 @@ const ContactForm = ({ about1 }) => {
         ></input>
 
         <label
-          for="lastName"
+          htmlFor="lastName"
           className="inline-block  mr-auto relative uppercase after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px]"
         >
           last name
@@ -88,7 +88,7 @@ const ContactForm = ({ about1 }) => {
         ></input>
 
         <label
-          for="email"
+          htmlFor="email"
           className="inline-block  mr-auto relative uppercase after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px]"
         >
           email
@@ -102,7 +102,7 @@ const ContactForm = ({ about1 }) => {
           className="border border-smartOrange rounded-xl leading-8 px-4"
         ></input>
 
-        <label for="phone" className="uppercase">
+        <label htmlFor="phone" className="uppercase">
           phone
         </label>
         <input
@@ -113,7 +113,7 @@ const ContactForm = ({ about1 }) => {
         ></input>
 
         <label
-          for="message"
+          htmlFor="message"
           className="inline-block  mr-auto relative uppercase after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px]"
         >
           message
