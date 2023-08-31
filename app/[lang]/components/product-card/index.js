@@ -44,8 +44,10 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang }) => {
             </h2>
             <BuyButton
               onClick={() =>
-                selectedCart.indexOf(stripeProduct) === -1 &&
+              {
+                !selectedCart.some((product) => product.id === stripeProduct[0].id) &&
                 dispatch(addToCart(stripeProduct[0]))
+              }
               }
             />
           </div>
