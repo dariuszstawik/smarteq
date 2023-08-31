@@ -32,7 +32,7 @@ export default function ImageGallery({ lang, content }) {
 
   const images = content
     ? content.map((horse) => ({
-        src: `/https:${horse?.fields?.image?.fields.file.url}`,
+        src: `https:${horse?.fields?.image?.fields.file.url}`,
         // src: horse?.fields?.image?.fields.file.url,
         width: horse?.fields?.image?.fields.file.details.image.width,
         height: horse?.fields?.image?.fields.file.details.image.height,
