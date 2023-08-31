@@ -11,7 +11,7 @@ export default async function AboutFirst({ about1, lang }) {
     <div className="w-full" id="aboutSection">
       <section className="container mx-auto pt-40">
         <SectionTitle>{aboutSection.title}</SectionTitle>
-        <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 py-20 mx-auto">
+        <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-6 py-20 mx-auto">
           <div className="max-w-[400px] -translate-y-[105px]">
             <img
               src="/asset-about1.svg"
