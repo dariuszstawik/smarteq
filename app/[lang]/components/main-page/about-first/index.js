@@ -1,4 +1,3 @@
-// "use client";
 import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import MobileCard from "../mibile-card";
@@ -10,9 +9,9 @@ export default async function AboutFirst({ about1, lang }) {
 
   return (
     <div className="w-full" id="aboutSection">
-      <section className="container mx-auto pt-[112px]">
+      <section className="container mx-auto pt-40">
         <SectionTitle>{aboutSection.title}</SectionTitle>
-        <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 py-10 mx-auto">
+        <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 py-20 mx-auto">
           <div className="max-w-[400px] -translate-y-[105px]">
             <img
               src="/asset-about1.svg"

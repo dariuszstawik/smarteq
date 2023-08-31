@@ -112,7 +112,7 @@ export default async function Home({ params: { lang } }) {
 
       <ContactCta />
 
-      <HorsesToSell lang={lang} />
+      <HorsesToSell lang={lang} hasTitle />
 
       <h2 className="m-10 pl-28 text-4xl font-semibold">
         {horsesForSale.title2}

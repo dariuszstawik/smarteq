@@ -3,7 +3,7 @@ import Button from "../../global-components/buttton";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-smartGray w-full h-560px] xl:h-[calc(100vh-112px)] mb-28">
+    <section className="relative bg-smartGray w-full h-560px] xl:h-[calc(100vh-112px)]">
       <img
         src="/asset-about2bg.svg"
         className="w-32 hidden md:block md:absolute top-[10%] left-[50%] -translate-x-[50%] z-50"

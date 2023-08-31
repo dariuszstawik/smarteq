@@ -27,7 +27,7 @@ export default async function BlogSectionHome({ lang, content }) {
 
   return (
     <div className="container mx-auto">
-      <div className="min-w-96 max-w-[800px] mx-auto my-6 flex flex-col items-center">
+      <div className="min-w-96 max-w-[800px] mx-auto my-6 flex flex-col items-center pt-20">
         <SectionTitle>{blogSection.title}</SectionTitle>
       </div>
 

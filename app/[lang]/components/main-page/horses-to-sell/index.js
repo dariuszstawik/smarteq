@@ -9,7 +9,7 @@ import ImageGallery from "../../image-gallery";
 import { getDictionary } from "@/lib/dictionary";
 import SectionTitle from "../../global-components/section-title";
 
-export default async function HorsesToSell({ lang }) {
+export default async function HorsesToSell({ lang, hasTitle }) {
   const { horsesForSale } = await getDictionary(lang);
 
   let contentfulLang;
@@ -33,9 +33,9 @@ export default async function HorsesToSell({ lang }) {
 
   return (
     <div className="w-full">
-      <section className="container mx-auto">
-        {/* <SectionTitle>{horsesForSale.title}</SectionTitle> */}
-        <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-28 py-28 mx-auto">
+      <section className="container mx-auto pt-32">
+        {hasTitle && <SectionTitle>{horsesForSale.title}</SectionTitle>}
+        <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 py-20 mx-auto">
           <MobileCard
             img={
               horsesToSellList.filter(
