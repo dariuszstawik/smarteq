@@ -12,7 +12,7 @@ export default async function page({ params: { lang } }) {
       <Navbar navigation={navigation} lang={lang} />
       <ExercisesHeader lang={lang} />
       <ItemsToBuy lang={lang} />
-      <ContactCta />
+      <ContactCta lang={lang} />
     </div>
   );
 }

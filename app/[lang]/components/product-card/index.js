@@ -17,11 +17,12 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang }) => {
 
   return (
     <div>
-      <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-28 py-28 mx-auto">
-        <MobileCard img={contentfulProduct.fields.image.fields.file.url} />
-
-        <div>
-          <h2 className="pl-4 pb-2 text-4xl font-bold">
+      <div className="max-w-7xl my-10 pb-14 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
+        <div className="max-w-md">
+          <MobileCard img={contentfulProduct.fields.image.fields.file.url} />
+        </div>
+        <div className="max-w-2xl">
+          <h2 className="p-4 text-4xl font-semibold">
             {/* {product.product.name} */}
             {contentfulProduct.fields.title}
           </h2>
@@ -29,7 +30,7 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang }) => {
             {/* {product.product.description} */}
             {contentfulProduct.fields.subtitle}
           </h3>
-          <div className="bg-white p-4 rounded-2xl mt-4">
+          <div className="bg-white p-4 rounded-2xl mt-2">
             <div>
               {documentToReactComponents(contentfulProduct.fields.content)}
             </div>
@@ -43,12 +44,11 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang }) => {
               </span>
             </h2>
             <BuyButton
-              onClick={() =>
-              {
-                !selectedCart.some((product) => product.id === stripeProduct[0].id) &&
-                dispatch(addToCart(stripeProduct[0]))
-              }
-              }
+              onClick={() => {
+                !selectedCart.some(
+                  (product) => product.id === stripeProduct[0].id
+                ) && dispatch(addToCart(stripeProduct[0]));
+              }}
             />
           </div>
         </div>

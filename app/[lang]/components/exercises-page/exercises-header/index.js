@@ -35,10 +35,10 @@ export default async function ExercisesHeader({ lang }) {
         <img
           src="/asset-about2bg.svg"
           alt="asset"
-          className=" m-20 mb-10 ml-auto w-32"
+          className="my-10 mb-6 ml-auto mr-14 w-32"
         />
 
-        <div className="m-20 mt-6 mb-10 flex flex-col gap-14 text-center">
+        <div className="m-10 mt-4 flex flex-col gap-10 text-center">
           <h1>
             {exercisesHeader.fields.title}
             <span className="text-smartOrange">

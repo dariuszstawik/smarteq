@@ -35,8 +35,6 @@ const ContactForm = ({ about1 }) => {
       }),
     });
 
-    console.log("To jest response.body" + response.body);
-
     if (response.status === 200) {
       setShowNotification(true);
     } else {
@@ -57,7 +55,7 @@ const ContactForm = ({ about1 }) => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="relative w-1/2 mx-auto flex flex-col gap-2"
+        className="relative lg:w-1/2 mx-auto flex flex-col gap-2"
       >
         <label
           htmlFor="firstName"

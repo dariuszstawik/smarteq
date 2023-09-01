@@ -14,10 +14,10 @@ const PageHero = ({ title, titleSpan, content, buttonContent, img }) => {
         <img
           src="/asset-about2bg.svg"
           alt="asset"
-          className=" m-20 mb-10 ml-auto w-32"
+          className=" m-8-10 ml-auto w-32"
         />
 
-        <div className="m-20 mt-6 mb-10 flex flex-col gap-14 text-center">
+        <div className="mx-6 my-6 flex flex-col gap-8 text-center">
           <h1>
             {title}
             <span className="text-smartOrange">{titleSpan}</span>

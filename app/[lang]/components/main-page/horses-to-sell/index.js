@@ -6,7 +6,7 @@ import { client } from "@/lib/contentful/client";
 import { getDictionary } from "@/lib/dictionary";
 import SectionTitle from "../../global-components/section-title";
 
-export default async function HorsesToSell({ lang, hasTitle }) {
+export default async function HorsesToSell({ lang, hasTitle, hasTopPadding }) {
   const { horsesForSale } = await getDictionary(lang);
 
   let contentfulLang;
@@ -29,20 +29,22 @@ export default async function HorsesToSell({ lang, hasTitle }) {
   const horsesToSellList = resHorsesToSell.items;
 
   return (
-    <div className="w-full">
-      <section className="container mx-auto pt-32">
+    <div className="relative w-full lg:h-[calc(100vh-112px)] pb-10 lg:pb-0">
+      <section className={`container mx-auto pt-${hasTopPadding ? 32 : 6}`}>
         {hasTitle && <SectionTitle>{horsesForSale.title}</SectionTitle>}
-        <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 py-20 mx-auto">
-          <MobileCard
-            img={
-              horsesToSellList.filter(
-                (horseToSell) => horseToSell.fields.isHighlighted
-              )[0].fields.image.fields.file.url
-            }
-          />
+        <div className="max-w-7xl my-10 pb-4 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
+          <div className="max-w-md">
+            <MobileCard
+              img={
+                horsesToSellList.filter(
+                  (horseToSell) => horseToSell.fields.isHighlighted
+                )[0].fields.image.fields.file.url
+              }
+            />
+          </div>
 
-          <div>
-            <h2 className="pl-4 pb-2 text-4xl font-bold">
+          <div className="max-w-2xl">
+            <h2 className="p-4 text-4xl font-semibold">
               {
                 horsesToSellList.filter(
                   (horseToSell) => horseToSell.fields.isHighlighted
@@ -56,19 +58,59 @@ export default async function HorsesToSell({ lang, hasTitle }) {
                 )[0].fields.subtitle
               }
             </h3>
-            <div className="bg-white p-4 rounded-2xl mt-4">
-              <div>
-                {documentToReactComponents(
-                  horsesToSellList.filter(
-                    (horseToSell) => horseToSell.fields.isHighlighted
-                  )[0].fields.content
-                )}
-              </div>
+            <div className="bg-white p-4 rounded-2xl mt-2">
+              {documentToReactComponents(
+                horsesToSellList.filter(
+                  (horseToSell) => horseToSell.fields.isHighlighted
+                )[0].fields.content
+              )}
             </div>
             <Button>Read more</Button>
           </div>
         </div>
       </section>
     </div>
+
+    // <div className="w-full">
+    //   <section className="container mx-auto pt-32">
+    //     {hasTitle && <SectionTitle>{horsesForSale.title}</SectionTitle>}
+    //     <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 py-20 mx-auto">
+    //       <MobileCard
+    //         img={
+    //           horsesToSellList.filter(
+    //             (horseToSell) => horseToSell.fields.isHighlighted
+    //           )[0].fields.image.fields.file.url
+    //         }
+    //       />
+
+    //       <div>
+    //         <h2 className="pl-4 pb-2 text-4xl font-bold">
+    //           {
+    //             horsesToSellList.filter(
+    //               (horseToSell) => horseToSell.fields.isHighlighted
+    //             )[0].fields.title
+    //           }
+    //         </h2>
+    //         <h3 className="pl-4 text-2xl">
+    //           {
+    //             horsesToSellList.filter(
+    //               (horseToSell) => horseToSell.fields.isHighlighted
+    //             )[0].fields.subtitle
+    //           }
+    //         </h3>
+    //         <div className="bg-white p-4 rounded-2xl mt-4">
+    //           <div>
+    //             {documentToReactComponents(
+    //               horsesToSellList.filter(
+    //                 (horseToSell) => horseToSell.fields.isHighlighted
+    //               )[0].fields.content
+    //             )}
+    //           </div>
+    //         </div>
+    //         <Button>Read more</Button>
+    //       </div>
+    //     </div>
+    //   </section>
+    // </div>
   );
 }

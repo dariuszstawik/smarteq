@@ -1,7 +1,8 @@
 import React from "react";
 import ButtonLg from "../../global-components/buttonLg";
+import Link from "next/link";
 
-const BusinessOfferSection = () => {
+const BusinessOfferSection = ({ lang }) => {
   return (
     <section className="w-full flex justify-center mt-28">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 mx-28">
@@ -11,7 +12,9 @@ const BusinessOfferSection = () => {
             className="h-64 mb-12"
             alt="business offer"
           />
-          <ButtonLg isOrange>Business offer</ButtonLg>
+          <Link className="text-inherit" href={`/${lang}/#offer`}>
+            <ButtonLg isOrange>Business offer</ButtonLg>
+          </Link>
         </div>
         <div className="flex flex-col justify-end items-center">
           <img
@@ -19,7 +22,9 @@ const BusinessOfferSection = () => {
             className="h-64 mb-12"
             alt="view my exercises"
           />
-          <ButtonLg>View my exercises</ButtonLg>
+          <Link className="text-inherit" href={`/${lang}/exercises`}>
+            <ButtonLg>View my exercises</ButtonLg>
+          </Link>
         </div>
       </div>
     </section>

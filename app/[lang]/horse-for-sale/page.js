@@ -42,8 +42,8 @@ export default async function page({ params: { lang } }) {
       <Navbar navigation={navigation} lang={lang} />
       <HorsesForSaleHeader lang={lang} />
       <HorsesToSell lang={lang} />
-      <YoutubePlayer />
-      <h2 className="m-10 pl-28 text-4xl font-semibold">
+      {/* <YoutubePlayer /> */}
+      <h2 className="m-6 lg:-mt-8 lg:pl-40 text-4xl font-semibold">
         {horsesForSale.title2}
       </h2>
       <ImageGallery lang={lang} content={horsesForSaleContent} />

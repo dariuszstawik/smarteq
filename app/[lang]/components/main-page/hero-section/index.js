@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "../../global-components/buttton";
+import Link from "next/link";
 
-const HeroSection = () => {
+const HeroSection = ({ lang }) => {
   return (
     <section className="relative bg-smartGray w-full h-560px] xl:h-[calc(100vh-112px)]">
       <img
@@ -48,7 +49,9 @@ const HeroSection = () => {
             </p>
           </div>
           <div className="flex justify-center md:-translate-y-[30%] lg:-translate-y-[50%] xl:-translate-y-[100%]">
-            <Button>Check my exercises</Button>
+            <Link className="text-inherit" href={`/${lang}/exercises`}>
+              <Button>Check my exercises</Button>
+            </Link>
           </div>
           <img src="/hero-asset-horse.svg" className="md:hidden" />
         </div>

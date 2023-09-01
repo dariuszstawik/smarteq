@@ -54,13 +54,16 @@ export default async function HorseForSalePost({ params }) {
       <Navbar navigation={navigation} lang={params.lang} />
       <PageHeader>Horses for sale</PageHeader>
       <section className="container mx-auto">
-        <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-28 py-28 mx-auto">
-          <MobileCard
-            img={horsesForSaleContent[0].fields.image.fields.file.url}
-          />
+        {/* <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-2 py-28 mx-auto"> */}
+        <div className="max-w-7xl my-10 pb-4 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
+          <div className="max-w-md">
+            <MobileCard
+              img={horsesForSaleContent[0].fields.image.fields.file.url}
+            />
+          </div>
 
-          <div>
-            <h2 className="pl-4 pb-2 text-4xl font-bold">
+          <div className="max-w-2xl">
+            <h2 className="p-4 text-4xl font-semibold">
               {horsesForSaleContent[0].fields.title}
             </h2>
             <h3 className="pl-4 text-2xl">
@@ -80,7 +83,7 @@ export default async function HorseForSalePost({ params }) {
           {" "}
           {/* <YoutubePlayer /> */}
         </div>
-        <h2 className="m-10 pl-28 text-4xl font-semibold">
+        <h2 className="m-6 lg:-mt-8 lg:pl-40 text-4xl font-semibold">
           {horsesForSale.title2}
         </h2>
         <ImageGallery lang={params.lang} content={horsesForSaleContent[1]} />

@@ -94,7 +94,7 @@ export default async function Home({ params: { lang } }) {
     <main>
       <NavbarHomepage navigation={navigation} lang={lang} />
 
-      <HeroSection />
+      <HeroSection lang={lang} />
 
       <BlogSectionHome content={blogPost} lang={lang} />
 
@@ -108,13 +108,13 @@ export default async function Home({ params: { lang } }) {
 
       <AboutFourth about4={about4} />
 
-      <BusinessOfferSection />
+      <BusinessOfferSection lang={lang} />
 
-      <ContactCta />
+      <ContactCta lang={lang} />
 
-      <HorsesToSell lang={lang} hasTitle />
+      <HorsesToSell lang={lang} hasTitle hasTopPadding />
 
-      <h2 className="m-10 pl-28 text-4xl font-semibold">
+      <h2 className="m-6 lg:mt-20 lg:pl-36 text-4xl font-semibold">
         {horsesForSale.title2}
       </h2>
 
