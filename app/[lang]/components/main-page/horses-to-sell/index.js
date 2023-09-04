@@ -44,14 +44,14 @@ export default async function HorsesToSell({ lang, hasTitle, hasTopPadding }) {
           </div>
 
           <div className="max-w-2xl">
-            <h2 className="p-4 text-4xl font-semibold">
+            <h2 className="p-4">
               {
                 horsesToSellList.filter(
                   (horseToSell) => horseToSell.fields.isHighlighted
                 )[0].fields.title
               }
             </h2>
-            <h3 className="pl-4 text-2xl">
+            <h3 className="pl-4">
               {
                 horsesToSellList.filter(
                   (horseToSell) => horseToSell.fields.isHighlighted

@@ -14,7 +14,7 @@
 
   body {
     font-family: 'SourceSerifVariable-Roman', sans-serif;
-    @apply text-xl min-h-screen max-w-full; 
+    @apply text-base lg:text-xl min-h-screen max-w-full overflow-x-hidden; 
   }
 
   @layer base {
@@ -27,11 +27,11 @@
     }
 
     h2 {
-      @apply text-2xl font-bold;
+      @apply text-2xl sm:text-3xl md:text-4xl font-semibold;
     }
 
     h1 {
-      @apply text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold;
+      @apply text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold;
     }
 
     h3 {

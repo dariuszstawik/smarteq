@@ -1,12 +1,10 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../buttton";
+import SectionTitle from "../section-title";
 
 const ContactForm = ({ about1 }) => {
   const form = useRef(null);
-  console.log("about1 contact form " + about1);
-
-  console.log(about1);
 
   const [showNotification, setShowNotification] = useState(false);
 
@@ -49,9 +47,12 @@ const ContactForm = ({ about1 }) => {
       className="container pt-[112px] flex flex-col gap-2 relative"
       id="contactSection"
     >
-      <h2 className="inline-block text-4xl font-bold text-center uppercase border-b-2 border-smartOrange mx-auto mb-12">
+      {/* <h2 className="inline-block text-4xl font-bold text-center uppercase border-b-2 border-smartOrange mx-auto mb-12">
         Contact me
-      </h2>
+      </h2> */}
+
+      <SectionTitle>Contact me</SectionTitle>
+
       <form
         ref={form}
         onSubmit={sendEmail}

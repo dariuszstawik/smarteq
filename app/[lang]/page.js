@@ -114,9 +114,7 @@ export default async function Home({ params: { lang } }) {
 
       <HorsesToSell lang={lang} hasTitle hasTopPadding />
 
-      <h2 className="m-6 lg:mt-20 lg:pl-36 text-4xl font-semibold">
-        {horsesForSale.title2}
-      </h2>
+      <h2 className="m-6 lg:mt-20 lg:pl-36">{horsesForSale.title2}</h2>
 
       <ImageGallery lang={lang} content={horsesForSaleContent} />
 

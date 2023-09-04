@@ -22,11 +22,11 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang }) => {
           <MobileCard img={contentfulProduct.fields.image.fields.file.url} />
         </div>
         <div className="max-w-2xl">
-          <h2 className="p-4 text-4xl font-semibold">
+          <h2 className="p-4">
             {/* {product.product.name} */}
             {contentfulProduct.fields.title}
           </h2>
-          <h3 className="pl-4 text-2xl">
+          <h3 className="pl-4">
             {/* {product.product.description} */}
             {contentfulProduct.fields.subtitle}
           </h3>

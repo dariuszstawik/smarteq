@@ -45,9 +45,7 @@ const AboutFourth = ({ about4 }) => {
 
           <div className="max-w-2xl">
             <div className="h-[106px] hidden lg:block" />
-            <h2 className="p-4 text-4xl font-semibold">
-              {about4.fields.title}
-            </h2>
+            <h2 className="p-4">{about4.fields.title}</h2>
             <div className="bg-white p-4 rounded-2xl mt-2">
               <div>{documentToReactComponents(about4.fields.content)}</div>
             </div>

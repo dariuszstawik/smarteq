@@ -20,9 +20,7 @@ const AboutThird = ({ about3 }) => {
 
           <div className="max-w-2xl">
             {/* <div className="h-[106px] hidden lg:block" /> */}
-            <h2 className="p-4 text-4xl font-semibold">
-              {about3.fields.title}
-            </h2>
+            <h2 className="p-4">{about3.fields.title}</h2>
             <div className="bg-white p-4 rounded-2xl mt-2">
               <div>{documentToReactComponents(about3.fields.content)}</div>
             </div>
