@@ -14,7 +14,7 @@
 
   body {
     font-family: 'SourceSerifVariable-Roman', sans-serif;
-    @apply text-xl min-h-screen;
+    @apply text-xl min-h-screen max-w-full; 
   }
 
   @layer base {

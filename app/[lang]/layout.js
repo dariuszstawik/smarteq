@@ -22,7 +22,7 @@ export default async function RootLayout({ children, params }) {
   return (
     // <html lang="pl">
     <html lang={params.lang}>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col max-w-full overflow-x-hidden">
         {" "}
         <Providers>
           <div className="pt-28"> {children} </div>
