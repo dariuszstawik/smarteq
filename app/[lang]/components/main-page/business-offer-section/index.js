@@ -9,7 +9,7 @@ const BusinessOfferSection = ({ lang }) => {
         <div className="flex flex-col justify-end items-center">
           <img
             src="/business-offer.svg"
-            className="h-64 mb-12"
+            className="h-52 lg:h-64 mb-12"
             alt="business offer"
           />
           <Link className="text-inherit" href={`/${lang}/#offer`}>
@@ -19,7 +19,7 @@ const BusinessOfferSection = ({ lang }) => {
         <div className="flex flex-col justify-end items-center">
           <img
             src="/exercises.svg"
-            className="h-64 mb-12"
+            className="h-52 lg:h-64 mb-12"
             alt="view my exercises"
           />
           <Link className="text-inherit" href={`/${lang}/exercises`}>

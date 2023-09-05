@@ -47,10 +47,6 @@ const ContactForm = ({ about1 }) => {
       className="container pt-[112px] flex flex-col gap-2 relative"
       id="contactSection"
     >
-      {/* <h2 className="inline-block text-4xl font-bold text-center uppercase border-b-2 border-smartOrange mx-auto mb-12">
-        Contact me
-      </h2> */}
-
       <SectionTitle>Contact me</SectionTitle>
 
       <form

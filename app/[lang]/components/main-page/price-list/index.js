@@ -42,7 +42,7 @@ export default async function GraphicOffer({ lang }) {
       <div>
         <SectionTitle>{graphicOffer.title}</SectionTitle>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mx-10 md:mx-32 place-content-center text-xl">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mx-10 md:mx-32 place-content-center">
           <ul className="place-content-center">
             {graphicOfferItems.map((item, i) => (
               <li key={i}>
@@ -68,7 +68,7 @@ export default async function GraphicOffer({ lang }) {
         </div>
       </div>
 
-      <div className="max-w-[600px] mt-20 mx-10 md:mx-32 xl:mx-auto text-xl">
+      <div className="max-w-[600px] mt-20 mx-10 md:mx-32 xl:mx-auto">
         {documentToReactComponents(graphicOfferParagraph.fields.content)}
       </div>
     </div>
