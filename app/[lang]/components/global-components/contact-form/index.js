@@ -52,7 +52,7 @@ const ContactForm = ({ about1 }) => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="relative lg:w-1/2 mx-auto flex flex-col gap-2"
+        className="relative w-4/5 md:w-3/4 lg:w-1/2 mx-auto flex flex-col gap-2"
       >
         <label
           htmlFor="firstName"

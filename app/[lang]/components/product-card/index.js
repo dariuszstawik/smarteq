@@ -36,13 +36,13 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang }) => {
             </div>
           </div>
           <div className="p-4 flex gap-12 items-center">
-            <h2>
+            <h3>
               Price: <span className="w-10" />
               <span className="text-smartOrange">
                 {(stripeProduct[0].unit_amount / 100).toFixed(2) + " "}
                 zł{" "}
               </span>
-            </h2>
+            </h3>
             <BuyButton
               onClick={() => {
                 !selectedCart.some(

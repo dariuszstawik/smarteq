@@ -9,7 +9,7 @@ export default async function AboutFirst({ about1, lang }) {
 
   return (
     <div className="w-full" id="aboutSection">
-      <section className="container mx-auto pt-40">
+      <section className="container mx-auto pt-32">
         <SectionTitle>{aboutSection.title}</SectionTitle>
         <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
           <div className="max-w-md">

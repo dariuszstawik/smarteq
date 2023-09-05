@@ -27,9 +27,9 @@ const Navbar = ({ lang, navigation }) => {
   };
 
   return (
-    <div className="text-xl fixed w-full h-28 flex justify-between items-center px-4 lg:px-16 py-4 bg-white top-0 left-0 z-40">
+    <div className=" text-base lg:text-lg fixed w-screen h-28 flex justify-between items-center px-4 lg:px-10 xl:px-16 py-4 bg-white top-0 left-0 z-50">
       <Logo closeMobileMenu={closeMobileMenu} lang={lang} />
-      <div className="pl-16 w-full flex justify-end content-center items-center gap-6">
+      <div className="w-full flex justify-end content-center items-center gap-6">
         <ul
           className={
             isMobileMenuActive
