@@ -5,7 +5,7 @@ import Link from "next/link";
 const BusinessOfferSection = ({ lang }) => {
   return (
     <section className="w-full flex justify-center mt-28">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 mx-28">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 px-10 lg:px-28">
         <div className="flex flex-col justify-end items-center">
           <img
             src="/business-offer.svg"

@@ -20,7 +20,7 @@ const ContactCta = ({ lang }) => {
         className="hidden md:block absolute bottom-16 right-48"
       />
       {/* <div className=" flex flex-col justify-center items-center h-[calc(100vh-112px)] bg-contain bg-center bg-no-repeat mx-auto"> */}
-      <div className="mx-80">
+      <div className="mx-10 xl:mx-80">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold m-6">
           Get acquainted with our future equestrian sport stars
         </h1>

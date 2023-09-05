@@ -8,9 +8,9 @@ export default async function OfferSection({ lang }) {
   const { equestrianOffer } = await getDictionary(lang);
 
   return (
-    <section className="container mx-auto min-h-[calc(100vh-112px)] pt-32 pb-4">
+    <section className="container mx-auto min-h-[calc(100vh-112px)] pt-32 pb-4 overflow-hidden">
       <SectionTitle>{equestrianOffer.title}</SectionTitle>
-      <div className="lg:bg-[url('/offer-img.svg')] w-full bg-contain bg-center bg-no-repeat mx-auto ">
+      <div className="lg:bg-[url('/offer-img.svg')] w-full bg-contain bg-center bg-no-repeat mx-auto overflow-hidden">
         {/* <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 place-content-center mx-auto pb-20"> */}
         <div className="w-full flex flex-col lg:flex-row mx-auto">
           <div className="flex flex-col-reverse lg:flex-col w-full justify-center items-center">
