@@ -108,7 +108,7 @@ export default async function Home({ params: { lang } }) {
 
       <AboutFourth about4={about4} />
 
-      <BusinessOfferSection lang={lang} />
+      {/* <BusinessOfferSection lang={lang} />
 
       <ContactCta lang={lang} />
 
@@ -116,7 +116,7 @@ export default async function Home({ params: { lang } }) {
 
       <h2 className="m-6 lg:mt-20 lg:pl-36">{horsesForSale.title2}</h2>
 
-      <ImageGallery lang={lang} content={horsesForSaleContent} />
+      <ImageGallery lang={lang} content={horsesForSaleContent} /> */}
 
       <GraphicOffer lang={lang} />
 
