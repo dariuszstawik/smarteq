@@ -76,7 +76,11 @@ export default async function HorseForSalePost({ params }) {
                 )}
               </div>
             </div>
-            <Button>Contact us</Button>
+            {/* <Button>Contact us</Button> */}
+            <h3 className="p-4">
+              Contact us: <span className="w-10" />
+              <span className="text-smartOrange">tel. 605 820 340</span>
+            </h3>
           </div>
         </div>
         <div className="flex justify-center items-center mt-28">

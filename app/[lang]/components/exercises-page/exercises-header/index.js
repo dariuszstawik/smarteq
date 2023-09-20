@@ -29,7 +29,7 @@ export default async function ExercisesHeader({ lang }) {
       
       h-[calc(100vh-112px)]
      
-    mb-28 flex flex-col xl:flex-row xl:overflow-hidden"
+     flex flex-col xl:flex-row xl:overflow-hidden"
     >
       <div>
         <img
@@ -46,7 +46,7 @@ export default async function ExercisesHeader({ lang }) {
             </span>
           </h1>
           <h3>{exercisesHeader.fields.headerContent}</h3>
-          <Button className="mx-auto mt-2">Check my e-books</Button>
+          {/* <Button className="mx-auto mt-2">Check my e-books</Button> */}
         </div>
       </div>
 

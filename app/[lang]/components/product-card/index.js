@@ -7,7 +7,7 @@ import MobileCard from "../main-page/mibile-card";
 import BuyButton from "../global-components/buy-button";
 import { addToCart } from "../../GlobalRedux/store";
 
-const ProductCard = ({ contentfulProduct, stripeProduct, lang }) => {
+const ProductCard = ({ contentfulProduct, stripeProduct, lang, isEven }) => {
   const dispatch = useDispatch();
   const selectedCart = useSelector((state) => state.cart);
 
@@ -16,10 +16,13 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang }) => {
   }, [selectedCart]);
 
   return (
-    <div>
-      <div className="max-w-7xl my-10 pb-14 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
+    <div className={!isEven ? "bg-smartGray" : ""}>
+      <div className="max-w-7xl py-28 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
         <div className="max-w-md">
-          <MobileCard img={contentfulProduct.fields.image.fields.file.url} />
+          <MobileCard
+            img={contentfulProduct.fields.image.fields.file.url}
+            hasOrangeBorder={!isEven}
+          />
         </div>
         <div className="max-w-2xl">
           <h2 className="p-4">

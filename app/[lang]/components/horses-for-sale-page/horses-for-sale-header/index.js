@@ -46,7 +46,7 @@ export default async function HorsesForSaleHeader({ lang }) {
             </span>
           </h1>
           <h3>{horsesForSaleHeader.fields.headerContent}</h3>
-          <Button className="mx-auto mt-2">Check my e-books</Button>
+          {/* <Button className="mx-auto mt-2">Check my e-books</Button> */}
         </div>
       </div>
 

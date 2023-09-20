@@ -49,6 +49,7 @@ export default async function ItemsToBuy({ lang }) {
                   stripeProduct.product.metadata.key ===
                   contentfulProduct.fields.keyFromStripe
               )}
+              isEven={i % 2 === 0}
             />
           </li>
         ))}

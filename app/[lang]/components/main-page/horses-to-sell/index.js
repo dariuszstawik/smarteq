@@ -65,7 +65,11 @@ export default async function HorsesToSell({ lang, hasTitle, hasTopPadding }) {
                 )[0].fields.content
               )}
             </div>
-            <Button>Read more</Button>
+            <h3 className="p-4">
+              Contact us: <span className="w-10" />
+              <span className="text-smartOrange">tel. 605 820 340</span>
+            </h3>
+            {/* <Button>Read more</Button> */}
           </div>
         </div>
       </section>

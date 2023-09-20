@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HeroSection = ({ lang }) => {
   return (
-    <section className="relative bg-smartGray w-full h-560px] xl:h-[calc(100vh-112px)] overflow-x-hidden">
+    <section className="relative bg-smartGray w-full h-560px xl:h-[calc(100vh-112px)] xl:min-h-[715px] overflow-x-hidden">
       <img
         src="/asset-about2bg.svg"
         className="w-32 hidden md:block md:absolute top-[10%] left-[50%] -translate-x-[50%] z-50"
