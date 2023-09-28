@@ -7,7 +7,7 @@ import AboutFirst from "../components/main-page/about-first";
 import AboutSecond from "../components/main-page/about-second";
 import AboutThird from "../components/main-page/about-third";
 import AboutFourth from "../components/main-page/about-fourth";
-import GraphicOffer from "../components/main-page/price-list";
+import GraphicOffer from "../components/main-page/graphic-offer";
 import ContactForm from "../components/global-components/contact-form";
 import NavbarHomepage from "../components/global-components/navbar-homepage";
 

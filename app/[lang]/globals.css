@@ -14,7 +14,7 @@
 
   body {
     font-family: 'SourceSerifVariable-Roman', sans-serif;
-    @apply text-base lg:text-xl min-h-screen max-w-full overflow-x-hidden; 
+    @apply text-base lg:text-lg min-h-screen max-w-full overflow-x-hidden; 
   }
 
   @layer base {
@@ -31,7 +31,7 @@
     }
 
     h1 {
-      @apply text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold;
+      @apply text-3xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-6xl font-semibold leading-normal;
     }
 
     h3 {
@@ -44,6 +44,14 @@
 
     ul Link, ul a, button a {
       @apply text-inherit;
+    }
+
+.article ul {
+  @apply list-disc pl-6;
+}
+
+    p {
+      @apply my-6;
     }
 
     /* section {

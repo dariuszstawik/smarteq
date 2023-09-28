@@ -1,3 +1,4 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
 import React, { ReactNode } from "react";
 
@@ -14,10 +15,10 @@ const SingleArticle = ({ title, lead, content, img }) => {
           alt={img?.fields?.description ? img.fields.description : ""}
         />
       </div>
-      <div>
+      <div className="article">
         <p className="font-bold">{lead}</p>
-        <div className="text-base leading-6 my-4"></div>
-        {content}
+        <div className="text-base  my-4"></div>
+        {documentToReactComponents(content)}
       </div>
     </div>
   );

@@ -13,8 +13,9 @@ import AboutFourth from "./components/main-page/about-fourth";
 import { getDictionary } from "@/lib/dictionary";
 import NavbarHomepage from "./components/global-components/navbar-homepage";
 import BlogSectionHome from "./components/global-components/blog-section-home";
-import GraphicOffer from "./components/main-page/price-list";
+import GraphicOffer from "./components/main-page/graphic-offer";
 import ImageGallery from "./components/image-gallery";
+import RidingOffer from "./components/main-page/riding-offer";
 
 export default async function Home({ params: { lang } }) {
   const { page, navigation, horsesForSale } = await getDictionary(lang);
@@ -108,17 +109,9 @@ export default async function Home({ params: { lang } }) {
 
       <AboutFourth about4={about4} />
 
-      {/* <BusinessOfferSection lang={lang} />
-
-      <ContactCta lang={lang} />
-
-      <HorsesToSell lang={lang} hasTitle hasTopPadding />
-
-      <h2 className="m-6 lg:mt-20 lg:pl-36">{horsesForSale.title2}</h2>
-
-      <ImageGallery lang={lang} content={horsesForSaleContent} /> */}
-
       <GraphicOffer lang={lang} />
+
+      <RidingOffer lang={lang} />
 
       <ContactForm />
     </main>

@@ -2,15 +2,16 @@
     "navigation": {
       "offer": "Graphic offer",
       "about": "About me",
-      "exercises": "Exercises",
+      "exercises": "Riding Exercises",
       "horsesForSale": "Horses for sale",
       "blog": "Blog",
       "contact": "Contact"
     },
 
     "heroSection": {
-      "title": "Step into the world of graphics",
-      "subtitle": "We create graphic materials for companies passionate about the equestrian world",
+      "titleSpan1": "Immerse yourself",
+      "titleSpan2": "in the world of graphics",
+      "subtitle": "We are a group that designs promotional materials. Thanks to our projects, you will improve your sales and stand out with good quality on the market in which your brand operates.",
       "button": "Check my exercises"
     },
 
@@ -19,19 +20,26 @@
       },
 
       "blogSection": {
-        "title": "Latest blog posts",
+        "title": "Last blog posts",
         "button": "Read more"
       },
 
       "equestrianOffer": {
         "title": "Equestrian offer",
-        "buttonHorses": "horses for sale",
-        "buttonExercises": "view  my exercises"
+        "paragraph": "Our hobby is horse riding. The vast majority of people with whom we create our brand are absorbed by the equestrian world. We sell and help in selecting the right horse, horse training, rider training, we conduct lectures and training in horse riding at an intermediate level. New in our offer are Smart Plans combined with an innovative horse riding teaching program.",
+        "buttonHorses": "Horses for Sale",
+        "buttonExercises": "List of Smart Plans"
       },
       
       "graphicOffer": {
         "title": "graphic offer"
       },
+
+      "ridingOffer": {
+        "title": "riding offer"
+      },
+
+
       "horsesForSale": {
         "title": "Horses for sale",
         "title2": "Other horses"

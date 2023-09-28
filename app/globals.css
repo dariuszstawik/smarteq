@@ -46,6 +46,10 @@
       @apply text-inherit;
     }
 
+    p {
+      @apply my-4;
+    }
+
     /* section {
       @apply pt-[112px];
     } */

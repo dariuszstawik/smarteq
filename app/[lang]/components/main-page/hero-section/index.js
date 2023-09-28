@@ -1,8 +1,10 @@
 import React from "react";
 import Button from "../../global-components/buttton";
 import Link from "next/link";
+import { getDictionary } from "@/lib/dictionary";
 
-const HeroSection = ({ lang }) => {
+export default async function HeroSection({ lang }) {
+  const { heroSection } = await getDictionary(lang);
   return (
     <section className="relative bg-smartGray w-full h-560px xl:h-[calc(100vh-112px)] xl:min-h-[715px] overflow-x-hidden">
       <img
@@ -32,32 +34,31 @@ const HeroSection = ({ lang }) => {
         <div className="h-full flex flex-col justify-center items-center md:block">
           <div className="relative ml-[5%] md:ml-[12%] 2xl:ml-[16%] flex flex-col xl:justify-center">
             <h1 className="text-center md:text-left mx-auto text-2xl sm:text-3xl md:hidden">
-              Step into the world of graphic
+              {/* Step into the world of graphic */}
+              {heroSection.titleSpan1}
+              {heroSection.titleSpan2}
             </h1>
-            <h1 className="hidden relative text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold md:flex items-center pt-20">
+            <h1 className="text-center hidden relative text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold md:flex items-center pt-20">
               <span className="pr-2 md:w-60 md:h-60 xl:w-96 xl:h-96 md:border-4 md:rounded-full md:border-smartOrange flex justify-end items-center">
-                Step into{" "}
+                {heroSection.titleSpan1}
               </span>
-              <span className="ml-2">the world of graphics</span>
+              <span className="ml-2">{heroSection.titleSpan2}</span>
             </h1>
             <p
-              className="text-center md:text-left md:text-lg lg:text-xl md:absolute bottom-10 lg:bottom-16 xl:bottom-32 left-[86px] xl:left-[140px]"
+              className="max-w-3xl text-center md:text-left md:text-lg lg:text-xl md:absolute bottom-6 lg:bottom-6 xl:bottom-6 left-[60px] xl:left-[140px]"
               // translate-y-[450%] xl:translate-y-[300%] lg:-translate-x-[13%]
             >
-              We create graphic materials for companies passionate about the
-              equestrian world{" "}
+              {heroSection.subtitle}
             </p>
           </div>
-          <div className="flex justify-center md:-translate-y-[30%] lg:-translate-y-[50%] xl:-translate-y-[100%]">
+          {/* <div className="flex justify-center md:-translate-y-[30%] lg:-translate-y-[50%] xl:-translate-y-[100%]">
             <Link className="text-inherit" href={`/${lang}/exercises`}>
               <Button>Check my exercises</Button>
             </Link>
-          </div>
+          </div> */}
           <img src="/hero-asset-horse.svg" className="md:hidden" />
         </div>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

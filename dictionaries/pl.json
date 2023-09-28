@@ -2,15 +2,16 @@
     "navigation": {
       "offer": "Oferta graficzna",
       "about": "O mnie",
-      "exercises": "Ćwiczenia",
+      "exercises": "Ćwiczenia jeździeckie",
       "horsesForSale": "Konie na sprzedaż",
       "blog": "Blog",
       "contact": "Kontakt"
     },
 
     "heroSection": {
-      "title": "Step into the world of graphics",
-      "subtitle": "We create graphic materials for companies passionate about the equestrian world",
+      "titleSpan1": "Zanurz się",
+      "titleSpan2": "w świecie grafiki",
+      "subtitle": "Jesteśmy grupą projektującą materiały promocyjne. Dzięki naszym realizacjom poprawisz swoją sprzedaż i będziesz wyróżniał się dobrą jakością na rynku, w którym obraca się twoja marka.",
       "button": "Check my exercises"
     },
 
@@ -19,19 +20,25 @@
     },
 
     "blogSection": {
-      "title": "Ostatnie wpisy na blogu",
+      "title": "Ostatnie wpisy blogowe",
       "button": "czytaj więcej"
     },
 
     "equestrianOffer": {
       "title": "Oferta jeździecka",
-      "buttonHorses": "konie na sprzedaż",
-      "buttonExercises": "zobacz ćwiczenia"
+      "paragraph": "Naszym konikiem jest jeździectwo. Zdecydowana większość osób, z którymi tworzymy naszą markę jest pochłonięta przez świat jeździecki. Zajmujemy się sprzedażą oraz pomocą w doborze odpowiedniego konia, treningiem koni, treningiem jeźdźców, prowadzimy wykłady oraz szkolenia w zakresie nauki jazdy konnej na poziomie średniozaawansowanym. Nowością w naszej ofercie są Smart Plany połączone z innowacyjnym programem nauczania jazdy konnej.",
+      "buttonHorses": "Konie na Sprzedaż",
+      "buttonExercises": "Lista Smart Planów"
     },
 
     "graphicOffer": {
       "title": "Oferta graficzna"
     },
+
+    "ridingOffer": {
+      "title": "oferta jeździecka"
+    },
+
     "horsesForSale": {
       "title": "Konie na sprzedaż",
       "title2": "Pozostałe konie"

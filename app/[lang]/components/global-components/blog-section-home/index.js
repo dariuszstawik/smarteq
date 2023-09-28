@@ -1,4 +1,3 @@
-// "use client";
 import { getDictionary } from "@/lib/dictionary";
 import NewsCard from "../../main-page/news-section/news-card";
 import SectionTitle from "../section-title";

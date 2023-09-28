@@ -16,7 +16,7 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang, isEven }) => {
   }, [selectedCart]);
 
   return (
-    <div className={!isEven ? "bg-smartGray" : ""}>
+    <div className={!isEven ? " bg-smartGray overflow-visible" : ""}>
       <div className="max-w-7xl py-28 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
         <div className="max-w-md">
           <MobileCard

@@ -43,7 +43,7 @@ export default async function page({ params: { lang } }) {
       <HorsesForSaleHeader lang={lang} />
       <HorsesToSell lang={lang} />
       {/* <YoutubePlayer /> */}
-      <h2 className="m-6 lg:-mt-8 lg:pl-40">{horsesForSale.title2}</h2>
+      <h2 className="m-10 lg:-mt-8 lg:pl-40">{horsesForSale.title2}</h2>
       <ImageGallery lang={lang} content={horsesForSaleContent} />
     </div>
   );

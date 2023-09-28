@@ -42,11 +42,16 @@ export default async function GraphicOffer({ lang }) {
       <div>
         <SectionTitle>{graphicOffer.title}</SectionTitle>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mx-10 md:mx-32 place-content-center">
-          <ul className="place-content-center">
+        <div className="mx-10 md:mx-28 ">
+          <ul>
+            <img
+              src="/contact-image.svg"
+              className="md:w-[400px] float-right hidden xl:block"
+              alt="contact-image"
+            />
             {graphicOfferItems.map((item, i) => (
               <li key={i}>
-                <div className="sm:w-96 md:w-[600px] lg:w-[800px] mx-auto flex justify-start gap-4">
+                <div className=" mx-auto flex justify-start gap-4 my-2">
                   <div className="w-32 flex justify-end shrink-0">
                     <span className="inline-block text-right mr-2">
                       {item.fields.price ? item.fields.price : "INDV"}
@@ -62,13 +67,13 @@ export default async function GraphicOffer({ lang }) {
           </ul>
           <img
             src="/contact-image.svg"
-            className="md:w-[460px] mx-center"
+            className="md:w-[400px] xl:hidden"
             alt="contact-image"
           />
         </div>
       </div>
 
-      <div className="max-w-[600px] mt-20 mx-10 md:mx-32 xl:mx-auto">
+      <div className="mt-10 mx-10 md:mx-32">
         {documentToReactComponents(graphicOfferParagraph.fields.content)}
       </div>
     </div>

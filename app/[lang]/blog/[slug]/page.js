@@ -7,7 +7,7 @@ import PageHeader from "../../components/global-components/page-header";
 
 async function getContentfulBlogPosts(contentfulLang, slug) {
   const blogPosts = await client.getEntries(
-    { content_type: "blogPost", "fields.slug": slug },
+    { content_type: "blogPost", "fields.slug": slug, locale: contentfulLang },
     {
       next: {
         revalidate: 30,
@@ -40,7 +40,7 @@ export default async function BlogPost({ params }) {
       <SingleArticle
         title={blogPost.fields.title}
         lead={blogPost.fields.lead}
-        content={documentToReactComponents(blogPost.fields.content)}
+        content={blogPost.fields.content}
         img={blogPost.fields.image ? blogPost.fields.image : ""}
       ></SingleArticle>
     </div>

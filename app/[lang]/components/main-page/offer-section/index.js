@@ -3,6 +3,7 @@ import ButtonLg from "../../global-components/buttonLg";
 import { getDictionary } from "@/lib/dictionary";
 import SectionTitle from "../../global-components/section-title";
 import Link from "next/link";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export default async function OfferSection({ lang }) {
   const { equestrianOffer } = await getDictionary(lang);
@@ -10,6 +11,9 @@ export default async function OfferSection({ lang }) {
   return (
     <section className="container mx-auto min-h-[calc(100vh-112px)] pt-32 overflow-hidden">
       <SectionTitle>{equestrianOffer.title}</SectionTitle>
+      <div className="max-w-[700px] my-10 mx-10 md:mx-32 xl:mx-auto text-center">
+        {equestrianOffer.paragraph}
+      </div>
       <div className="lg:bg-[url('/offer-img.svg')] w-full bg-contain bg-center bg-no-repeat mx-auto overflow-hidden">
         <div className="w-full flex flex-col lg:flex-row mx-auto">
           <div className="flex flex-col-reverse lg:flex-col w-full justify-center items-center">

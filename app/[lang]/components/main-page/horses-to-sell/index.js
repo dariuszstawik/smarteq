@@ -29,7 +29,7 @@ export default async function HorsesToSell({ lang, hasTitle, hasTopPadding }) {
   const horsesToSellList = resHorsesToSell.items;
 
   return (
-    <div className="relative w-full lg:h-[calc(100vh-112px)] pb-10 lg:pb-0">
+    <div className="relative w-full pb-10 lg:pb-0 mb-20">
       <section className={`container mx-auto pt-${hasTopPadding ? 32 : 6}`}>
         {hasTitle && <SectionTitle>{horsesForSale.title}</SectionTitle>}
         <div className="max-w-7xl my-10 pb-4 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
