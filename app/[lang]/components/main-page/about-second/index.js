@@ -32,8 +32,8 @@ const AboutSecond = ({ about2 }) => {
 
           <div className="max-w-2xl">
             <div className="h-[106px] hidden lg:block" />
-            <h2 className="p-4">{about2.fields.title}</h2>
-            <div className="bg-white p-4 rounded-2xl mt-2">
+            <h2 className="p-4 pt-0">{about2.fields.title}</h2>
+            <div className="bg-white px-4 py-1 mt-2 pl-4 rounded-2xl">
               <div>{documentToReactComponents(about2.fields.content)}</div>
             </div>
           </div>

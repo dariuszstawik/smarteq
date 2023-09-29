@@ -37,16 +37,16 @@ export default async function RidingOffer({ lang }) {
   const ridingOfferParagraph = resRidingOfferParagraph.items[0];
 
   return (
-    <div className="container mx-auto pt-[112px]" id="offer">
+    <div className="container mx-auto pt-[112px]" id="ridingOffer">
       <div>
         <SectionTitle>{ridingOffer.title}</SectionTitle>
 
         <div className="mx-10 md:mx-28 ">
           <ul>
             <img
-              src="/contact-image.svg"
-              className="md:w-[400px] float-right hidden xl:block"
-              alt="contact-image"
+              src="horse-jumping.svg"
+              alt="horse jumping"
+              className="md:w-[300px] float-right hidden xl:block"
             />
             {ridingOfferItems.map((item, i) => (
               <li key={i}>
@@ -65,9 +65,9 @@ export default async function RidingOffer({ lang }) {
             ))}
           </ul>
           <img
-            src="/contact-image.svg"
-            className="md:w-[400px] xl:hidden"
-            alt="contact-image"
+            src="horse-jumping.svg"
+            alt="horse jumping"
+            className="md:w-[300px] xl:hidden"
           />
         </div>
       </div>

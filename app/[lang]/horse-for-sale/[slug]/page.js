@@ -1,10 +1,7 @@
 import { getDictionary } from "@/lib/dictionary";
-
 import { client } from "@/lib/contentful/client";
 import Navbar from "../../components/global-components/navbar";
 import ImageGallery from "../../components/image-gallery";
-import YoutubePlayer from "../../components/horses-for-sale-page/youtube-player";
-
 import PageHeader from "../../components/global-components/page-header";
 import MobileCard from "../../components/main-page/mibile-card";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -12,7 +9,11 @@ import Button from "../../components/global-components/buttton";
 
 async function getContentfulContent(contentfulLang, slug) {
   const resHorsesForSalePost = await client.getEntries(
-    { content_type: "horseForSale", "fields.slug": slug },
+    {
+      content_type: "horseForSale",
+      "fields.slug": slug,
+      // locale: contentfulLang,
+    },
     {
       next: {
         revalidate: 30,
@@ -78,8 +79,10 @@ export default async function HorseForSalePost({ params }) {
             </div>
             {/* <Button>Contact us</Button> */}
             <h3 className="p-4">
-              Contact us: <span className="w-10" />
-              <span className="text-smartOrange">tel. 605 820 340</span>
+              {horsesForSale.contact}: <span className="w-16" />
+              <span className="text-smartOrange">
+                {horsesForSaleContent[0].fields.contact}
+              </span>
             </h3>
           </div>
         </div>

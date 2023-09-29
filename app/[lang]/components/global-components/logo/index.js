@@ -6,7 +6,7 @@ const Logo = ({ closeMobileMenu, lang }) => {
     <Link href={`/${lang}/`}>
       <img
         className="w-72"
-        src="/smart_logo.svg"
+        src="/logo-06.svg"
         onClick={() => closeMobileMenu()}
       />
     </Link>

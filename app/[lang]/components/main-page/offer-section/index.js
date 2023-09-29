@@ -3,7 +3,6 @@ import ButtonLg from "../../global-components/buttonLg";
 import { getDictionary } from "@/lib/dictionary";
 import SectionTitle from "../../global-components/section-title";
 import Link from "next/link";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export default async function OfferSection({ lang }) {
   const { equestrianOffer } = await getDictionary(lang);

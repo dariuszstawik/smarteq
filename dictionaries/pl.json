@@ -1,6 +1,7 @@
 {
     "navigation": {
-      "offer": "Oferta graficzna",
+      "graphicOffer": "Oferta graficzna",
+      "ridingOffer": "Oferta jeździecka",
       "about": "O mnie",
       "exercises": "Ćwiczenia jeździeckie",
       "horsesForSale": "Konie na sprzedaż",
@@ -39,13 +40,28 @@
       "title": "oferta jeździecka"
     },
 
+    "contact": {
+      "title": "Kontakt",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "message": "Wiadomość",
+      "button": "Wyślij",
+      "notification": "Wiadomość wysłana. Dziękujemy!"
+    },
+
+    "exercises": {
+      "price": "Cena:",
+      "button": "Dodaj do koszyka"
+    },
+
     "horsesForSale": {
       "title": "Konie na sprzedaż",
-      "title2": "Pozostałe konie"
+      "title2": "Pozostałe konie",
+      "contact": "Kontakt"
     },
-    "contact": {
-      "title": "kontakt"
-    },
+
 
     "cart": {
       "title": "Koszyk",

@@ -39,13 +39,13 @@ export default async function HeroSection({ lang }) {
               {heroSection.titleSpan2}
             </h1>
             <h1 className="text-center hidden relative text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold md:flex items-center pt-20">
-              <span className="pr-2 md:w-60 md:h-60 xl:w-96 xl:h-96 md:border-4 md:rounded-full md:border-smartOrange flex justify-end items-center">
+              <span className="pr-2 pl-8 md:w-60 md:h-60 xl:w-96 xl:h-96 md:border-4 md:rounded-full md:border-smartOrange flex justify-end items-center">
                 {heroSection.titleSpan1}
               </span>
-              <span className="ml-2">{heroSection.titleSpan2}</span>
+              <span className="ml-6">{heroSection.titleSpan2}</span>
             </h1>
             <p
-              className="max-w-3xl text-center md:text-left md:text-lg lg:text-xl md:absolute bottom-6 lg:bottom-6 xl:bottom-6 left-[60px] xl:left-[140px]"
+              className="max-w-3xl text-center md:text-left md:text-lg lg:text-xl md:absolute bottom-6 lg:bottom-6 xl:bottom-2 left-[60px] xl:left-[82px]"
               // translate-y-[450%] xl:translate-y-[300%] lg:-translate-x-[13%]
             >
               {heroSection.subtitle}

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Button from "../buttton";
 import SectionTitle from "../section-title";
 
-const ContactForm = ({ about1 }) => {
+const ContactForm = ({ contact }) => {
   const form = useRef(null);
 
   const [showNotification, setShowNotification] = useState(false);
@@ -47,7 +47,7 @@ const ContactForm = ({ about1 }) => {
       className="container pt-[112px] flex flex-col gap-2 relative"
       id="contactSection"
     >
-      <SectionTitle>Contact me</SectionTitle>
+      <SectionTitle>{contact.title}</SectionTitle>
 
       <form
         ref={form}
@@ -58,7 +58,7 @@ const ContactForm = ({ about1 }) => {
           htmlFor="firstName"
           className="inline-block  mr-auto relative uppercase after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px]"
         >
-          first name
+          {contact.firstName}
         </label>
         <input
           id="firstName"
@@ -72,7 +72,7 @@ const ContactForm = ({ about1 }) => {
           htmlFor="lastName"
           className="inline-block  mr-auto relative uppercase after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px]"
         >
-          last name
+          {contact.lastName}
         </label>
         <input
           id="lastName"
@@ -86,7 +86,7 @@ const ContactForm = ({ about1 }) => {
           htmlFor="email"
           className="inline-block  mr-auto relative uppercase after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px]"
         >
-          email
+          {contact.email}
         </label>
         <input
           id="email"
@@ -98,7 +98,7 @@ const ContactForm = ({ about1 }) => {
         ></input>
 
         <label htmlFor="phone" className="uppercase">
-          phone
+          {contact.phone}
         </label>
         <input
           id="phone"
@@ -111,7 +111,7 @@ const ContactForm = ({ about1 }) => {
           htmlFor="message"
           className="inline-block  mr-auto relative uppercase after:content-['*'] after:text-smartOrange after:absolute after:-right-[10px] after:-top-[2px]"
         >
-          message
+          {contact.message}
         </label>
         <textarea
           id="message"
@@ -122,11 +122,11 @@ const ContactForm = ({ about1 }) => {
         ></textarea>
 
         <Button isOrange type="submit" className="ml-auto px-8">
-          Wyślij
+          {contact.button}
         </Button>
         {showNotification && (
           <div className="text-smartOrange text-2xl p-2 rounded absolute bottom-0 left-0">
-            Wiadomość wysłana. Dziękujemy!
+            {contact.notification}
           </div>
         )}
       </form>

@@ -2,6 +2,7 @@ import { client } from "@/lib/contentful/client";
 import React from "react";
 import Stripe from "stripe";
 import ProductCard from "../../product-card";
+import { getDictionary } from "@/lib/dictionary";
 
 async function getStripeProducts() {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
@@ -15,6 +16,8 @@ async function getStripeProducts() {
 }
 
 export default async function ItemsToBuy({ lang }) {
+  const { exercises } = await getDictionary(lang);
+
   let contentfulLang;
 
   if (lang === "pl") {
@@ -42,7 +45,7 @@ export default async function ItemsToBuy({ lang }) {
         {contentfulProducts.map((contentfulProduct, i) => (
           <li key={i}>
             <ProductCard
-              lang={lang}
+              exercises={exercises}
               contentfulProduct={contentfulProduct}
               stripeProduct={stripeProducts.filter(
                 (stripeProduct) =>

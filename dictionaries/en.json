@@ -1,6 +1,7 @@
 {
     "navigation": {
-      "offer": "Graphic offer",
+      "graphicOffer": "Graphic offer",
+      "ridingOffer": "Riding offer",
       "about": "About me",
       "exercises": "Riding Exercises",
       "horsesForSale": "Horses for sale",
@@ -39,14 +40,29 @@
         "title": "riding offer"
       },
 
+      "contact": {
+        "title": "Contact",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "E-mail",
+        "phone": "Phone",
+        "message": "Message",
+        "button": "Send",
+        "notification": "Message sent. Thank you!"
+      },
+
+
+      "exercises": {
+        "price": "Price",
+        "button": "Add to cart"
+      },
 
       "horsesForSale": {
         "title": "Horses for sale",
-        "title2": "Other horses"
+        "title2": "Other horses",
+        "contact": "Contact"
       },
-      "contact": {
-        "title": "Contact"
-      },
+
       "cart": {
         "title": "Cart",
         "removeButton": "Remove",

@@ -5,20 +5,18 @@ import OfferSection from "./components/main-page/offer-section";
 import AboutFirst from "./components/main-page/about-first";
 import AboutSecond from "./components/main-page/about-second";
 import AboutThird from "./components/main-page/about-third";
-import BusinessOfferSection from "./components/main-page/business-offer-section";
-import ContactCta from "./components/main-page/contact-cta";
-import HorsesToSell from "./components/main-page/horses-to-sell";
 import ContactForm from "./components/global-components/contact-form";
 import AboutFourth from "./components/main-page/about-fourth";
 import { getDictionary } from "@/lib/dictionary";
 import NavbarHomepage from "./components/global-components/navbar-homepage";
 import BlogSectionHome from "./components/global-components/blog-section-home";
 import GraphicOffer from "./components/main-page/graphic-offer";
-import ImageGallery from "./components/image-gallery";
 import RidingOffer from "./components/main-page/riding-offer";
 
 export default async function Home({ params: { lang } }) {
-  const { page, navigation, horsesForSale } = await getDictionary(lang);
+  const { page, navigation, contact, horsesForSale } = await getDictionary(
+    lang
+  );
 
   let contentfulLang;
 
@@ -113,7 +111,7 @@ export default async function Home({ params: { lang } }) {
 
       <RidingOffer lang={lang} />
 
-      <ContactForm />
+      <ContactForm contact={contact} />
     </main>
   );
 }

@@ -11,7 +11,7 @@ const SingleArticle = ({ title, lead, content, img }) => {
           src={img?.fields?.file?.url ? "https:" + img.fields.file.url : ""}
           width={img?.fields?.file?.details?.image?.width}
           height={img?.fields?.file?.details?.image?.height}
-          className="w-full object-cover rounded-lg my-10"
+          className="w-full h-[460px] object-cover rounded-lg my-10"
           alt={img?.fields?.description ? img.fields.description : ""}
         />
       </div>

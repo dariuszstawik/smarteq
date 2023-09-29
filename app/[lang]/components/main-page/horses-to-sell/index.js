@@ -44,7 +44,7 @@ export default async function HorsesToSell({ lang, hasTitle, hasTopPadding }) {
           </div>
 
           <div className="max-w-2xl">
-            <h2 className="p-4">
+            <h2 className="p-4 pt-0">
               {
                 horsesToSellList.filter(
                   (horseToSell) => horseToSell.fields.isHighlighted
@@ -58,7 +58,7 @@ export default async function HorsesToSell({ lang, hasTitle, hasTopPadding }) {
                 )[0].fields.subtitle
               }
             </h3>
-            <div className="bg-white p-4 rounded-2xl mt-2">
+            <div className="bg-white p-3 rounded-2xl">
               {documentToReactComponents(
                 horsesToSellList.filter(
                   (horseToSell) => horseToSell.fields.isHighlighted
@@ -69,52 +69,9 @@ export default async function HorsesToSell({ lang, hasTitle, hasTopPadding }) {
               Contact us: <span className="w-10" />
               <span className="text-smartOrange">tel. 605 820 340</span>
             </h3>
-            {/* <Button>Read more</Button> */}
           </div>
         </div>
       </section>
     </div>
-
-    // <div className="w-full">
-    //   <section className="container mx-auto pt-32">
-    //     {hasTitle && <SectionTitle>{horsesForSale.title}</SectionTitle>}
-    //     <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 py-20 mx-auto">
-    //       <MobileCard
-    //         img={
-    //           horsesToSellList.filter(
-    //             (horseToSell) => horseToSell.fields.isHighlighted
-    //           )[0].fields.image.fields.file.url
-    //         }
-    //       />
-
-    //       <div>
-    //         <h2 className="pl-4 pb-2 text-4xl font-bold">
-    //           {
-    //             horsesToSellList.filter(
-    //               (horseToSell) => horseToSell.fields.isHighlighted
-    //             )[0].fields.title
-    //           }
-    //         </h2>
-    //         <h3 className="pl-4 text-2xl">
-    //           {
-    //             horsesToSellList.filter(
-    //               (horseToSell) => horseToSell.fields.isHighlighted
-    //             )[0].fields.subtitle
-    //           }
-    //         </h3>
-    //         <div className="bg-white p-4 rounded-2xl mt-4">
-    //           <div>
-    //             {documentToReactComponents(
-    //               horsesToSellList.filter(
-    //                 (horseToSell) => horseToSell.fields.isHighlighted
-    //               )[0].fields.content
-    //             )}
-    //           </div>
-    //         </div>
-    //         <Button>Read more</Button>
-    //       </div>
-    //     </div>
-    //   </section>
-    // </div>
   );
 }

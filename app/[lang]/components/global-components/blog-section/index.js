@@ -3,7 +3,7 @@
 import { useState } from "react";
 import NewsCard from "../../main-page/news-section/news-card";
 
-const BlogSection = ({ lang, content, isHomepage }) => {
+const BlogSection = ({ lang, content, isHomepage, blogSection }) => {
   const [maxAmount, setMaxAmount] = useState(10);
 
   const increaseMaxAmount = () => {
@@ -32,7 +32,7 @@ const BlogSection = ({ lang, content, isHomepage }) => {
   return (
     <div className="container mx-auto">
       <div className="min-w-96 max-w-[800px] mx-auto my-6 flex flex-col items-center">
-        <h2 className="p-4">Latest blog posts</h2>
+        <h2 className="p-4">{blogSection.title}</h2>
       </div>
 
       <ul className="grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto px-14">

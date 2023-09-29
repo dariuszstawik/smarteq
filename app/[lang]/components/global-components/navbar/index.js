@@ -39,12 +39,22 @@ const Navbar = ({ lang, navigation }) => {
         >
           <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
-              href={`/${lang}/#offer`}
+              href={`/${lang}/#graphicOffer`}
               onClick={(e) => {
                 closeMobileMenu();
               }}
             >
-              {navigation.offer}
+              {navigation.graphicOffer}
+            </Link>
+          </li>
+          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+            <Link
+              href={`/${lang}/#ridingOffer`}
+              onClick={(e) => {
+                closeMobileMenu();
+              }}
+            >
+              {navigation.ridingOffer}
             </Link>
           </li>
           <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">

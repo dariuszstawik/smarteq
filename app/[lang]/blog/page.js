@@ -6,7 +6,7 @@ import { getDictionary } from "@/lib/dictionary";
 import PageHeader from "../components/global-components/page-header";
 
 export default async function Blog({ params: { lang } }) {
-  const { navigation } = await getDictionary(lang);
+  const { navigation, blogSection } = await getDictionary(lang);
 
   let contentfulLang;
   if (lang === "pl") {
@@ -29,7 +29,7 @@ export default async function Blog({ params: { lang } }) {
     <div>
       <Navbar navigation={navigation} lang={lang} />
       <PageHeader>Blog</PageHeader>
-      <BlogSection content={blogPost} lang={lang} />
+      <BlogSection content={blogPost} lang={lang} blogSection={blogSection} />
     </div>
   );
 }

@@ -38,7 +38,7 @@ export default async function GraphicOffer({ lang }) {
   const graphicOfferParagraph = resGraphicOfferParagraph.items[0];
 
   return (
-    <div className="container mx-auto pt-[112px]" id="offer">
+    <div className="container mx-auto pt-[112px]" id="graphicOffer">
       <div>
         <SectionTitle>{graphicOffer.title}</SectionTitle>
 

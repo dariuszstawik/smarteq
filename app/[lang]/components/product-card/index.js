@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -7,7 +6,12 @@ import MobileCard from "../main-page/mibile-card";
 import BuyButton from "../global-components/buy-button";
 import { addToCart } from "../../GlobalRedux/store";
 
-const ProductCard = ({ contentfulProduct, stripeProduct, lang, isEven }) => {
+const ProductCard = ({
+  contentfulProduct,
+  stripeProduct,
+  exercises,
+  isEven,
+}) => {
   const dispatch = useDispatch();
   const selectedCart = useSelector((state) => state.cart);
 
@@ -25,7 +29,7 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang, isEven }) => {
           />
         </div>
         <div className="max-w-2xl">
-          <h2 className="p-4">
+          <h2 className="p-4 pt-0">
             {/* {product.product.name} */}
             {contentfulProduct.fields.title}
           </h2>
@@ -33,20 +37,21 @@ const ProductCard = ({ contentfulProduct, stripeProduct, lang, isEven }) => {
             {/* {product.product.description} */}
             {contentfulProduct.fields.subtitle}
           </h3>
-          <div className="bg-white p-4 rounded-2xl mt-2">
+          <div className="bg-white px-4 py-1 mt-2 pl-4 rounded-2xl">
             <div>
               {documentToReactComponents(contentfulProduct.fields.content)}
             </div>
           </div>
-          <div className="p-4 flex gap-12 items-center">
+          <div className="pl-4 flex gap-12 items-center">
             <h3>
-              Price: <span className="w-10" />
+              {exercises.price} <span className="w-10" />
               <span className="text-smartOrange">
                 {(stripeProduct[0].unit_amount / 100).toFixed(2) + " "}
                 zł{" "}
               </span>
             </h3>
             <BuyButton
+              exercises={exercises}
               onClick={() => {
                 !selectedCart.some(
                   (product) => product.id === stripeProduct[0].id
