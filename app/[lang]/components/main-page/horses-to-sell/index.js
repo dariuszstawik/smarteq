@@ -65,9 +65,15 @@ export default async function HorsesToSell({ lang, hasTitle, hasTopPadding }) {
                 )[0].fields.content
               )}
             </div>
-            <h3 className="p-4">
-              Contact us: <span className="w-10" />
-              <span className="text-smartOrange">tel. 605 820 340</span>
+            <h3 className="p-4 pl-2">
+              {horsesForSale.contact}: <span className="w-16" />
+              <span className="text-smartOrange">
+                {
+                  horsesToSellList.filter(
+                    (horseToSell) => horseToSell.fields.isHighlighted
+                  )[0].fields.contact
+                }
+              </span>
             </h3>
           </div>
         </div>

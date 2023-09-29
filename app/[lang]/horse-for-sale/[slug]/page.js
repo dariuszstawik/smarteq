@@ -11,8 +11,8 @@ async function getContentfulContent(contentfulLang, slug) {
   const resHorsesForSalePost = await client.getEntries(
     {
       content_type: "horseForSale",
-      "fields.slug": slug,
       // locale: contentfulLang,
+      "fields.slug": slug,
     },
     {
       next: {
@@ -53,7 +53,7 @@ export default async function HorseForSalePost({ params }) {
   return (
     <div className="w-full">
       <Navbar navigation={navigation} lang={params.lang} />
-      <PageHeader>Horses for sale</PageHeader>
+      <PageHeader>{horsesForSale.title}</PageHeader>
       <section className="container mx-auto">
         {/* <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-2 py-28 mx-auto"> */}
         <div className="max-w-7xl my-10 pb-4 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
@@ -86,10 +86,7 @@ export default async function HorseForSalePost({ params }) {
             </h3>
           </div>
         </div>
-        <div className="flex justify-center items-center mt-28">
-          {" "}
-          {/* <YoutubePlayer /> */}
-        </div>
+        <div className="flex justify-center items-center mt-28"> </div>
         <h2 className="m-6 lg:-mt-8 lg:pl-40 text-4xl font-semibold">
           {horsesForSale.title2}
         </h2>

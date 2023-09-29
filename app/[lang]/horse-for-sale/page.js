@@ -1,6 +1,5 @@
 import React from "react";
 import HorsesToSell from "../components/main-page/horses-to-sell";
-import YoutubePlayer from "../components/horses-for-sale-page/youtube-player";
 import Navbar from "../components/global-components/navbar";
 import { getDictionary } from "@/lib/dictionary";
 import HorsesForSaleHeader from "../components/horses-for-sale-page/horses-for-sale-header";
