@@ -34,10 +34,10 @@ const Navbar = ({ lang, navigation }) => {
           className={
             isMobileMenuActive
               ? "bg-white text-sm font-medium list-none absolute z-40 w-full top-full left-0 bg-backgroundGray py-4 flex flex-col justify-center align-center items-center gap-10 lg:static lg:flex-row my-4 ml-4"
-              : "bg-white text-sm font-medium list-none flex-col justify-center align-center items-center gap-10 lg:flex-row my-4 hidden lg:flex lg:justify-end ml-4"
+              : "bg-white text-sm font-medium list-none flex-col justify-center align-center items-center gap-10 lg:gap-8 lg:flex-row my-4 hidden lg:flex lg:justify-end ml-4"
           }
         >
-          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+          <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
               href={`/${lang}/#graphicOffer`}
               onClick={(e) => {
@@ -47,7 +47,7 @@ const Navbar = ({ lang, navigation }) => {
               {navigation.graphicOffer}
             </Link>
           </li>
-          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+          <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
               href={`/${lang}/#ridingOffer`}
               onClick={(e) => {
@@ -57,7 +57,7 @@ const Navbar = ({ lang, navigation }) => {
               {navigation.ridingOffer}
             </Link>
           </li>
-          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+          <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
               href={`/${lang}/#aboutSection`}
               onClick={(e) => {
@@ -68,20 +68,20 @@ const Navbar = ({ lang, navigation }) => {
             </Link>
           </li>
 
-          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+          <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link href={`/${lang}/exercises`}>{navigation.exercises}</Link>
           </li>
 
-          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+          <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link href={`/${lang}/horse-for-sale`}>
               {navigation.horsesForSale}
             </Link>
           </li>
-          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+          <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link href={`/${lang}/blog`}>{navigation.blog}</Link>
           </li>
 
-          <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
+          <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
               href={`/${lang}/#contactSection`}
               onClick={(e) => {

@@ -35,7 +35,7 @@ export default async function HeroSection({ lang }) {
           <div className="relative ml-[5%] md:ml-[12%] 2xl:ml-[16%] flex flex-col xl:justify-center">
             <h1 className="text-center md:text-left mx-auto text-2xl sm:text-3xl md:hidden">
               {/* Step into the world of graphic */}
-              {heroSection.titleSpan1}
+              <span className="pr-2">{heroSection.titleSpan1}</span>
               {heroSection.titleSpan2}
             </h1>
             <h1 className="text-center hidden relative text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold md:flex items-center pt-20">
