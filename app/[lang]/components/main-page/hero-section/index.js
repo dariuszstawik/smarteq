@@ -45,7 +45,7 @@ export default async function HeroSection({ lang }) {
               <span className="ml-6">{heroSection.titleSpan2}</span>
             </h1>
             <p
-              className="max-w-3xl text-center md:text-left md:text-lg lg:text-xl md:absolute bottom-6 lg:bottom-6 xl:bottom-2 left-[60px] xl:left-[82px]"
+              className="max-w-3xl text-center md:text-left md:text-lg lg:text-xl md:absolute bottom-6 lg:bottom-6 xl:bottom-2 left-[60px] xl:left-[90px]"
               // translate-y-[450%] xl:translate-y-[300%] lg:-translate-x-[13%]
             >
               {heroSection.subtitle}

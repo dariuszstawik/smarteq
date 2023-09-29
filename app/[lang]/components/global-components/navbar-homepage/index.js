@@ -66,7 +66,7 @@ const NavbarHomepage = ({ lang, navigation }) => {
                 handleScroll(e);
               }}
             >
-              {navigation.graphicOffer}
+              {navigation.ridingOffer}
             </Link>
           </li>
           <li className="uppercase text-sm font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">

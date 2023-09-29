@@ -6,7 +6,7 @@ import MobileCard from "../mibile-card";
 const AboutFourth = ({ about4 }) => {
   return (
     <div
-      className="relative w-full lg:h-[calc(100vh-112px)] mt-16 pb-28 bg-smartGray"
+      className="relative w-full lg:min-h-[calc(100vh-112px)] mt-16 pb-28 bg-smartGray"
       id="aboutSection"
     >
       <img

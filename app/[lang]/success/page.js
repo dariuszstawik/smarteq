@@ -7,14 +7,14 @@ import PageHeader from "../components/global-components/page-header";
 export default function success() {
   return (
     <>
-      <Navbar />
-      <PageHeader>Order scceded</PageHeader>
+      <PageHeader>Thank you / Dziękujemy</PageHeader>
 
-      <section className="container max-w-lg mx-auto">
-        Thank you for the order! Within 48 hours you will receive an e-mail with
-        the ordered e-books.
+      <section className="container max-w-lg mx-auto flex flex-col  justify-center items-center">
+        <h3 className="text-center my-10">
+          Thank you for the order / Dziękujemy za złożenie zamówienia!
+        </h3>
+        <Link href="/">Back to homepage / wróć do strony głównej</Link>
       </section>
-      <Link href="/">Back to homepage</Link>
     </>
   );
 }
