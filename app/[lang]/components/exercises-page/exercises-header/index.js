@@ -38,14 +38,16 @@ export default async function ExercisesHeader({ lang }) {
           className="my-10 mb-2 ml-auto mr-14 w-32"
         />
 
-        <div className="m-10 mt-2 flex flex-col gap-10 text-center">
+        <div className="m-10 mt-2 flex flex-col gap-10 pl-4">
           <h1>
             {exercisesHeader.fields.title}
             <span className="text-smartOrange">
               {exercisesHeader.fields.titleSpan}
             </span>
           </h1>
-          <p className="lg:text-xl">{exercisesHeader.fields.headerContent}</p>
+          <p className="lg:text-lg text-left mt-0">
+            {exercisesHeader.fields.headerContent}
+          </p>
           {/* <Button className="mx-auto mt-2">Check my e-books</Button> */}
         </div>
       </div>

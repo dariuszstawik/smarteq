@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../../global-components/buttton";
 import { client } from "@/lib/contentful/client";
 import HeaderSlider from "../../global-components/header-slider";
 
@@ -38,14 +37,14 @@ export default async function HorsesForSaleHeader({ lang }) {
           className="my-10 mb-2 ml-auto mr-14 w-32"
         />
 
-        <div className="m-10 mt-2 flex flex-col gap-10 text-center">
+        <div className="m-10 mt-2 flex flex-col gap-10 pl-4">
           <h1>
             {horsesForSaleHeader.fields.title}
             <span className="text-smartOrange">
               {horsesForSaleHeader.fields.titleSpan}
             </span>
           </h1>
-          <p className="lg:text-xl">
+          <p className="lg:text-lg mt-0">
             {horsesForSaleHeader.fields.headerContent}
           </p>
           {/* <Button className="mx-auto mt-2">Check my e-books</Button> */}
