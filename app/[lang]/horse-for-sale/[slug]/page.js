@@ -40,6 +40,8 @@ async function getContentfulContent(contentfulLang, slug) {
 export default async function HorseForSalePost({ params }) {
   const { navigation, horsesForSale } = await getDictionary(params.lang);
   const slug = params.slug;
+  console.log(" horsesForSalePost 77777777777777777");
+  console.log(horsesForSalePost);
 
   let contentfulLang;
   if (params.lang === "pl") {

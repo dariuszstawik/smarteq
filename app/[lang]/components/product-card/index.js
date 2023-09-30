@@ -5,6 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import MobileCard from "../main-page/mibile-card";
 import BuyButton from "../global-components/buy-button";
 import { addToCart } from "../../GlobalRedux/store";
+import ProductAmount from "../global-components/product-amount";
 
 const ProductCard = ({
   contentfulProduct,
@@ -42,7 +43,7 @@ const ProductCard = ({
               {documentToReactComponents(contentfulProduct.fields.content)}
             </div>
           </div>
-          <div className="pl-4 flex gap-12 items-center">
+          <div className="pl-4 flex gap-6 items-center justify-center">
             <h3>
               {exercises.price} <span className="w-10" />
               <span className="text-smartOrange">
@@ -50,6 +51,7 @@ const ProductCard = ({
                 zł{" "}
               </span>
             </h3>
+            <ProductAmount />
             <BuyButton
               exercises={exercises}
               onClick={() => {
