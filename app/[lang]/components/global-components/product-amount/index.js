@@ -1,7 +1,7 @@
 export default function ProductAmount() {
   return (
-    <div className="w-auto md:w-1/6 lg:w-96 px-4">
-      <div className="inline-flex items-center px-4 font-semibold font-heading text-black border border-gray-800 focus:ring-blue-300 focus:border-blue-300 rounded-md">
+    <div className="w-auto md:w-1/6 lg:w-96 px-4 flex justify-center my-auto">
+      <div className="mx-auto inline-flex items-center justify-center px-4 font-semibold font-heading text-black border border-gray-800 focus:ring-blue-300 focus:border-blue-300 rounded-md">
         <button className="py-2 hover:text-gray-700">
           <svg
             width="12"

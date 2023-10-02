@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, removeFromCart } from "../../GlobalRedux/store";
+import ProductAmount from "../global-components/product-amount";
 
 const CartView = ({ lang }) => {
   const selectedCart = useSelector((state) => state.cart);
@@ -44,13 +45,14 @@ const CartView = ({ lang }) => {
               {selectedCart.map((item) => {
                 return (
                   <li key={item.product.id}>
-                    <div className="mb-8 pb-4 mx-10 border-b">
-                      <div className="w-3/5">
+                    <div className="mb-8 pb-4 border-b">
+                      <div className="w-full flex justify-between">
                         <h3 className="mb-2 text-xl font-bold font-heading">
                           {lang === "pl"
                             ? item.product.description
                             : item.product.name}
                         </h3>
+                        <ProductAmount />
                       </div>
                       <div className="flex w-full lg:w-auto justify-between items-center">
                         <button onClick={() => dispatch(removeFromCart(item))}>
