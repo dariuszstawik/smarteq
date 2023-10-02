@@ -23,6 +23,9 @@ export async function POST(request) {
       cancel_url: "https://smarteq.vercel.app/pl/cancel",
       line_items: body.lineItems,
       mode: "payment",
+      shipping_address_collection: {
+        allowed_countries: ["PL", "US", "CA", "GB", "DE", "FR"],
+      },
     });
     return NextResponse.json({ session });
   } catch (err) {

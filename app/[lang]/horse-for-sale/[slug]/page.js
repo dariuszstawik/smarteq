@@ -11,8 +11,8 @@ async function getContentfulContent(contentfulLang, slug) {
   const resHorsesForSalePost = await client.getEntries(
     {
       content_type: "horseForSale",
-      // locale: contentfulLang,
       "fields.slug": slug,
+      locale: contentfulLang, // Add this line to specify the language
     },
     {
       next: {
@@ -40,8 +40,6 @@ async function getContentfulContent(contentfulLang, slug) {
 export default async function HorseForSalePost({ params }) {
   const { navigation, horsesForSale } = await getDictionary(params.lang);
   const slug = params.slug;
-  console.log(" horsesForSalePost 77777777777777777");
-  console.log(horsesForSalePost);
 
   let contentfulLang;
   if (params.lang === "pl") {
@@ -51,6 +49,9 @@ export default async function HorseForSalePost({ params }) {
   }
 
   const horsesForSaleContent = await getContentfulContent(contentfulLang, slug);
+
+  console.log(" horsesForSalePost 77777777777777777");
+  console.log(horsesForSaleContent[0]);
 
   return (
     <div className="w-full">
