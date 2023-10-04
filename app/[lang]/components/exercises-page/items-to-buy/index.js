@@ -45,6 +45,7 @@ export default async function ItemsToBuy({ lang }) {
         {contentfulProducts.map((contentfulProduct, i) => (
           <li key={i}>
             <ProductCard
+              lang={lang}
               exercises={exercises}
               contentfulProduct={contentfulProduct}
               stripeProduct={stripeProducts.filter(

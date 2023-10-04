@@ -2,7 +2,13 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart, removeFromCart } from "../../GlobalRedux/store";
+import {
+  clearCart,
+  decreaseCartItemAmount,
+  increaseCartItemAmount,
+  removeFromCart,
+  updateCartItemAmount,
+} from "../../GlobalRedux/store";
 import ProductAmount from "../global-components/product-amount";
 
 const CartView = ({ lang }) => {
@@ -12,13 +18,15 @@ const CartView = ({ lang }) => {
   console.log(cartItems);
   console.log("CART ITEMS: ", cartItems);
 
+  // const updateCartItemAmount = (id, amount) => {
+
   const router = useRouter();
 
   async function checkout() {
     const lineItems = cartItems.map((cartItem) => {
       return {
-        price: cartItem.id,
-        quantity: 1,
+        price: cartItem.product.id,
+        quantity: cartItem.amount,
       };
     });
     const res = await fetch("./api/checkout", {
@@ -44,22 +52,52 @@ const CartView = ({ lang }) => {
             <ul>
               {selectedCart.map((item) => {
                 return (
-                  <li key={item.product.id}>
+                  <li key={item.product.product.id}>
                     <div className="mb-8 pb-4 border-b">
-                      <div className="w-full flex justify-between">
-                        <h3 className="mb-2 text-xl font-bold font-heading">
+                      <div className="w-full flex justify-between items-center">
+                        <h3 className="mb-2 text-xl font-bold font-heading w-2/3">
                           {lang === "pl"
-                            ? item.product.description
-                            : item.product.name}
+                            ? item.product.product.description
+                            : item.product.product.name}
                         </h3>
-                        <ProductAmount />
+                        <div>
+                          {/* <span
+                          onClick={() =>  {
+                            item.amount > 1 &&
+                            item.amount = item.amount+1}
+                          }
+                          > */}
+                          <span
+                            className="px-4 cursor-pointer"
+                            onClick={() => {
+                              dispatch(decreaseCartItemAmount(item.product.id));
+                            }}
+                          >
+                            -
+                          </span>
+                          {item.amount} {lang === "pl" ? "szt." : "pcs."}
+                          <span
+                            className="pl-4 cursor-pointer"
+                            onClick={() => {
+                              dispatch(increaseCartItemAmount(item.product.id));
+                            }}
+                          >
+                            +
+                          </span>
+                        </div>
                       </div>
                       <div className="flex w-full lg:w-auto justify-between items-center">
                         <button onClick={() => dispatch(removeFromCart(item))}>
-                          {lang === "pl" ? "usuń" : "remove"}
+                          {lang === "pl"
+                            ? "usuń z koszyka"
+                            : "remove from cart"}
                         </button>
                         <p className="text-right text-lg font-bold font-heading text-smartOrange">
-                          {(item.unit_amount / 100).toFixed(2)} zł
+                          {(
+                            (item.product.unit_amount / 100) *
+                            item.amount
+                          ).toFixed(2)}{" "}
+                          zł
                         </p>
                       </div>
                     </div>
@@ -68,7 +106,7 @@ const CartView = ({ lang }) => {
               })}
             </ul>
           )}
-          <div className="flex flex-wrap mb-10 items-center justify-between py-6 mx-4 md:mx-10 gap-6">
+          <div className="flex flex-wrap mb-10 items-center justify-between py-6  gap-6">
             <div className="mb-4 md:mb-0">
               <h3 className="text-2xl text-smartOrange font-bold font-heading">
                 {lang === "pl" ? "Suma" : "Total price"}
@@ -76,7 +114,7 @@ const CartView = ({ lang }) => {
             </div>
             <span className="text-xl text-smartOrange font-bold font-heading">
               {selectedCart.reduce((acc, item) => {
-                return acc + item.unit_amount / 100;
+                return acc + (item.product.unit_amount / 100) * item.amount;
               }, 0)}{" "}
               zł
             </span>
