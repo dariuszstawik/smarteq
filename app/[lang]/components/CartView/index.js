@@ -120,8 +120,8 @@ const CartView = ({ lang }) => {
             </span>
             <p>
               {lang === "pl"
-                ? "Po opłaceniu zamówienia w ciągu 48 godzin otrzymasz e-maila z zamówionymi e-bookami."
-                : "After purchasing, you will receive an e-mail with your order within 24 hours."}
+                ? "Po opłaceniu zamówienia otrzymasz zamówione smart plany przesyłką kurierską."
+                : "After paying for your order, you will receive the ordered smart plans by courier service."}
             </p>
           </div>
           <div className="text-right mx-10 flex justify-between">
