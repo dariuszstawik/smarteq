@@ -48,7 +48,8 @@
         "phone": "Phone",
         "message": "Message",
         "button": "Send",
-        "notification": "Message sent. Thank you!"
+        "notification": "Message sent. Thank you!",
+        "checkbox": "I consent to the processing of my personal data in order to receive a response to the submitted inquiry. The administrator of the personal data is Smart Equestrian."
       },
 
 

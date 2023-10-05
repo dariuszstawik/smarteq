@@ -16,15 +16,6 @@ const cartSlice = createSlice({
       );
     },
 
-    // updateCartItemAmount(state, action) {
-    //   return [
-    //     ...state,
-    //     (state.find((item) => item.product.id === action.payload).amount = 2),
-    //   ];
-
-    //   item.amount = action.payload.amount - 1;
-    // },
-
     decreaseCartItemAmount(state, action) {
       state.find((item) => item.product.id === action.payload).amount > 1
         ? (state.find((item) => item.product.id === action.payload).amount -= 1)

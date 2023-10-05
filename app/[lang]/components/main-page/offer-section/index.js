@@ -61,9 +61,6 @@ export default async function OfferSection({ lang }) {
               className="hidden absolute top-[26%] right-20"
             />
           </div>
-
-          <div></div>
-          <div></div>
         </div>
       </div>
     </section>

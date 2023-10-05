@@ -120,7 +120,20 @@ const ContactForm = ({ contact }) => {
           required
           className="border border-smartOrange rounded-xl leading-8 px-4"
         ></textarea>
-
+        <div className="flex justify-start items-start mt-6 mb-2">
+          <input
+            type="checkbox"
+            id="privacyTermsCheckbox"
+            required
+            className="mr-2"
+          />
+          <label
+            htmlFor="privacyTermsCheckbox"
+            className="-translate-y-2 relative before:content-['*'] before:text-smartOrange before:mr-2"
+          >
+            {contact.checkbox}
+          </label>
+        </div>
         <Button isOrange type="submit" className="ml-auto px-8">
           {contact.button}
         </Button>

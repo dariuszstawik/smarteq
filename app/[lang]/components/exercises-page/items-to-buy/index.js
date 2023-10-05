@@ -57,19 +57,6 @@ export default async function ItemsToBuy({ lang }) {
             />
           </li>
         ))}
-
-        {/* {products.map((product, i) => (
-          <li key={product.product.id}>
-            <ProductCard
-              product={product}
-              productContent={productsContent.filter(
-                (productContent) =>
-                  productContent.fields.keyFromStripe ===
-                  product.product.metadata.key
-              )}
-            />
-          </li>
-        ))} */}
       </ul>
     </section>
   );

@@ -1,24 +1,20 @@
 "use client";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   clearCart,
   decreaseCartItemAmount,
   increaseCartItemAmount,
   removeFromCart,
-  updateCartItemAmount,
 } from "../../GlobalRedux/store";
-import ProductAmount from "../global-components/product-amount";
+import Link from "next/link";
 
 const CartView = ({ lang }) => {
   const selectedCart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart);
-  console.log(cartItems);
-  console.log("CART ITEMS: ", cartItems);
-
-  // const updateCartItemAmount = (id, amount) => {
+  const [isAgreed, setIsAgreed] = useState(false);
 
   const router = useRouter();
 
@@ -61,12 +57,6 @@ const CartView = ({ lang }) => {
                             : item.product.product.name}
                         </h3>
                         <div>
-                          {/* <span
-                          onClick={() =>  {
-                            item.amount > 1 &&
-                            item.amount = item.amount+1}
-                          }
-                          > */}
                           <span
                             className="px-4 cursor-pointer"
                             onClick={() => {
@@ -107,7 +97,7 @@ const CartView = ({ lang }) => {
               })}
             </ul>
           )}
-          <div className="flex flex-wrap mb-10 items-center justify-between py-6  gap-6">
+          <div className="flex flex-wrap items-center justify-between py-6  gap-6">
             <div className="mb-4 md:mb-0">
               <h3 className="text-2xl text-smartOrange font-bold font-heading">
                 {lang === "pl" ? "Suma" : "Total price"}
@@ -125,6 +115,47 @@ const CartView = ({ lang }) => {
                 : "After paying for your order, you will receive your products by courier service up to 14 business days."}
             </p>
           </div>
+          <hr className="w-1/2 my-6" />
+          <div className="flex justify-start items-start mb-10">
+            <input
+              type="checkbox"
+              id="privacyTermsCheckbox"
+              checked={isAgreed}
+              onChange={() => setIsAgreed(!isAgreed)}
+              className="mr-2"
+            />
+            <label
+              htmlFor="privacyTermsCheckbox"
+              className="-translate-y-2 relative before:content-['*'] before:text-smartOrange before:mr-2"
+            >
+              {lang === "pl" ? (
+                <>
+                  Zgadzam się na przetwarzanie danych osobowych w celu
+                  realizacji zamówienia. Akceptuję{" "}
+                  <Link href={`/${lang}/privacyPolicy`}>
+                    politykę prywatności
+                  </Link>{" "}
+                  i{" "}
+                  <Link href={`/${lang}/terms-and-conditions`}>
+                    Regulamin sklepu Smart Equestrian.
+                  </Link>
+                </>
+              ) : (
+                <>
+                  I agree to the processing of personal data for the purpose of
+                  processing the order. I accept{" "}
+                  <Link href={`/${lang}/privacyPolicy`}>
+                    the privacy policy
+                  </Link>{" "}
+                  and{" "}
+                  <Link href={`/${lang}/terms-and-conditions`}>
+                    Terms and Conditions of Smart Equestrian store
+                  </Link>
+                  .
+                </>
+              )}
+            </label>
+          </div>
           <div className="text-right mx-10 flex justify-between">
             <a
               className="inline-block w-full md:w-auto mb-4 md:mb-0 md:mr-6 py-4 px-8 bg-gray-100 hover:bg-gray-200 text-center font-bold font-heading uppercase rounded-md transition duration-200"
@@ -133,10 +164,21 @@ const CartView = ({ lang }) => {
             >
               {lang === "pl" ? "Wyczyść koszyk" : "Clear cart"}
             </a>
-            <button
+            {/* <button
               className="inline-block w-full md:w-auto py-4 px-8 bg-orange-300 hover:bg-orange-400 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200"
-              // href="#"
               onClick={checkout}
+            >
+              {lang === "pl" ? "zamów" : "Checkout"}
+            </button> */}
+
+            <button
+              className={`inline-block w-full md:w-auto py-4 px-8 ${
+                isAgreed
+                  ? "bg-orange-300 hover:bg-orange-400"
+                  : "bg-gray-300 cursor-not-allowed"
+              } text-center text-white font-bold font-heading uppercase rounded-md transition duration-200`}
+              onClick={checkout}
+              disabled={!isAgreed}
             >
               {lang === "pl" ? "zamów" : "Checkout"}
             </button>

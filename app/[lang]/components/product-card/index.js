@@ -5,7 +5,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import MobileCard from "../main-page/mibile-card";
 import BuyButton from "../global-components/buy-button";
 import { addToCart, increaseCartItemAmount } from "../../GlobalRedux/store";
-import { productionBrowserSourceMaps } from "@/next.config";
 
 const ProductCard = ({
   contentfulProduct,
@@ -44,14 +43,8 @@ const ProductCard = ({
           />
         </div>
         <div className="max-w-2xl">
-          <h2 className="p-4 pt-0">
-            {/* {product.product.name} */}
-            {contentfulProduct.fields.title}
-          </h2>
-          <h3 className="pl-4">
-            {/* {product.product.description} */}
-            {contentfulProduct.fields.subtitle}
-          </h3>
+          <h2 className="p-4 pt-0">{contentfulProduct.fields.title}</h2>
+          <h3 className="pl-4">{contentfulProduct.fields.subtitle}</h3>
           <div className="bg-white px-4 py-1 mt-2 pl-4 rounded-2xl">
             <div>
               {documentToReactComponents(contentfulProduct.fields.content)}
@@ -98,14 +91,6 @@ const ProductCard = ({
                       })
                     )
                   : setShowNotification(true);
-
-                // selectedCart.find((product) => {
-                //     const item = product.product.id === stripeProduct[0].id;
-                //     console.log("item", item);
-                //     console.log(item);
-                //     console.log("product", product);
-                //     dispatch(increaseCartItemAmount(stripeProduct[0].id));
-                //   });
               }}
             />
           </div>

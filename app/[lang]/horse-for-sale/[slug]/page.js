@@ -5,14 +5,13 @@ import ImageGallery from "../../components/image-gallery";
 import PageHeader from "../../components/global-components/page-header";
 import MobileCard from "../../components/main-page/mibile-card";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Button from "../../components/global-components/buttton";
 
 async function getContentfulContent(contentfulLang, slug) {
   const resHorsesForSalePost = await client.getEntries(
     {
       content_type: "horseForSale",
       "fields.slug": slug,
-      locale: contentfulLang, // Add this line to specify the language
+      locale: contentfulLang,
     },
     {
       next: {
@@ -50,15 +49,11 @@ export default async function HorseForSalePost({ params }) {
 
   const horsesForSaleContent = await getContentfulContent(contentfulLang, slug);
 
-  console.log(" horsesForSalePost 77777777777777777");
-  console.log(horsesForSaleContent[0]);
-
   return (
     <div className="w-full">
       <Navbar navigation={navigation} lang={params.lang} />
       <PageHeader>{horsesForSale.title}</PageHeader>
       <section className="container mx-auto">
-        {/* <div className="max-w-[1200px] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-[1fr,2fr] gap-12 mt-2 py-28 mx-auto"> */}
         <div className="max-w-7xl my-10 pb-4 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
           <div className="max-w-md">
             <MobileCard
@@ -80,7 +75,6 @@ export default async function HorseForSalePost({ params }) {
                 )}
               </div>
             </div>
-            {/* <Button>Contact us</Button> */}
             <h3 className="p-4">
               {horsesForSale.contact}: <span className="w-16" />
               <span className="text-smartOrange">

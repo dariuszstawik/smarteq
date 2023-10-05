@@ -48,7 +48,8 @@
       "phone": "Telefon",
       "message": "Wiadomość",
       "button": "Wyślij",
-      "notification": "Wiadomość wysłana. Dziękujemy!"
+      "notification": "Wiadomość wysłana. Dziękujemy!",
+      "checkbox": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu otrzymania odpowiedzi na przesłane zapytanie. Administatorem danych osobowych jest Smart Equestrian."
     },
 
     "exercises": {

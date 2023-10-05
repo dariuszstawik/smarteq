@@ -6,13 +6,10 @@ import "react-awesome-slider/dist/styles.css";
 
 export default function HeaderSlider({ images, className }) {
   const AutoplaySlider = withAutoplay(AwesomeSlider);
-  console.log("---IMAGEES IN HEADER SLIDER----");
-  console.log(images);
 
   return (
     <div>
       <AutoplaySlider
-        // className="p-0 justify-start items-start h-full"
         className={className}
         play={true}
         cancelOnInteraction={false}
