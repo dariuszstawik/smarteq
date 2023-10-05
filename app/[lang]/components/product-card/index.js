@@ -4,8 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import MobileCard from "../main-page/mibile-card";
 import BuyButton from "../global-components/buy-button";
-import { addToCart } from "../../GlobalRedux/store";
-import ProductAmount from "../global-components/product-amount";
+import { addToCart, increaseCartItemAmount } from "../../GlobalRedux/store";
 import { productionBrowserSourceMaps } from "@/next.config";
 
 const ProductCard = ({
@@ -20,6 +19,17 @@ const ProductCard = ({
 
   const [productAmount, setProductAmount] = useState(1);
 
+  const [showNotification, setShowNotification] = useState(false);
+
+  useEffect(() => {
+    if (showNotification) {
+      const timer = setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showNotification]);
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(selectedCart));
   }, [selectedCart]);
@@ -27,7 +37,6 @@ const ProductCard = ({
   return (
     <div className={!isEven ? " bg-smartGray overflow-visible" : ""}>
       <div className="max-w-7xl py-28 mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
-        {/* <form> */}
         <div className="max-w-md">
           <MobileCard
             img={contentfulProduct.fields.image.fields.file.url}
@@ -56,15 +65,6 @@ const ProductCard = ({
                 zł{" "}
               </span>
             </h3>
-            {/* <ProductAmount /> */}
-            {/* <input
-              className="w-12 m-0 px-2 py-4 text-center md:text-right border-2 border-black focus:ring-transparent focus:outline-none rounded-md bg-transparent"
-              type="number"
-              placeholder="1"
-              id="productAmount"
-            >
-              {productAmount}
-            </input> */}
 
             <div className="text-xl">
               <span
@@ -87,19 +87,9 @@ const ProductCard = ({
             <BuyButton
               type="submit"
               exercises={exercises}
-              // onClick={() => {
-              //   () => {
-              //     productAmount.forEach((amount) => {
-              //       !selectedCart.some(
-              //         (product) => product.id === stripeProduct[0].id
-              //       ) &&
-              //       dispatch(addToCart(stripeProduct[0]));
-              //     });
-              //   };
-              // }}
               onClick={() => {
                 !selectedCart.some(
-                  (product) => product.id === stripeProduct[0].id
+                  (product) => product.product.id === stripeProduct[0].id
                 )
                   ? dispatch(
                       addToCart({
@@ -107,14 +97,24 @@ const ProductCard = ({
                         amount: productAmount,
                       })
                     )
-                  : (selectedCart.find(
-                      (product) => product.id === stripeProduct[0].id
-                    ).amount += productAmount);
+                  : setShowNotification(true);
+
+                // selectedCart.find((product) => {
+                //     const item = product.product.id === stripeProduct[0].id;
+                //     console.log("item", item);
+                //     console.log(item);
+                //     console.log("product", product);
+                //     dispatch(increaseCartItemAmount(stripeProduct[0].id));
+                //   });
               }}
             />
           </div>
+          {showNotification && (
+            <div className="text-smartOrange text-2xl p-2 rounded">
+              {exercises.alreadyInCart}
+            </div>
+          )}
         </div>
-        {/* </form> */}
       </div>
     </div>
   );

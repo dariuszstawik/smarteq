@@ -54,7 +54,8 @@
 
       "exercises": {
         "price": "Price",
-        "button": "Add to cart"
+        "button": "Add to cart",
+        "alreadyInCart": "Product is already in the cart"
       },
 
       "horsesForSale": {
@@ -62,6 +63,7 @@
         "title2": "Other horses",
         "contact": "Contact"
       },
+
 
       "cart": {
         "title": "Cart",

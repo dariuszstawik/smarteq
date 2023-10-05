@@ -53,7 +53,8 @@
 
     "exercises": {
       "price": "Cena:",
-      "button": "Dodaj do koszyka"
+      "button": "Dodaj do koszyka",
+      "alreadyInCart": "Produkt już jest w koszyku"
     },
 
     "horsesForSale": {

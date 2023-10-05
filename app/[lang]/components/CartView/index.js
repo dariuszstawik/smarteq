@@ -79,6 +79,7 @@ const CartView = ({ lang }) => {
                           <span
                             className="pl-4 cursor-pointer"
                             onClick={() => {
+                              console.log("item.product", item.product);
                               dispatch(increaseCartItemAmount(item.product.id));
                             }}
                           >
