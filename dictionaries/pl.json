@@ -72,5 +72,14 @@
       "checkout": "Zamów",
       "empty cart": "Koszyk jest pusty",
       "paragraph": "Po opłaceniu zamówienia w ciągu 48 godzin otrzymasz e-maila z zamówionymi e-bookami."
+    },
+
+    "privacyPolicy": {
+      "title": "Polityka prywatności"
+    },
+
+    "termsAndConditions": {
+      "title": "Regulamin sklepu"
     }
+
   }

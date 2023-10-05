@@ -73,6 +73,14 @@
         "checkout": "Checkout",
         "empty cart": "Your cart is empty",
         "paragraph": "After purchasing, you will receive an e-mail with your order within 24 hours"
+      },
+
+      "privacyPolicy": {
+        "title": "Privacy Policy"
+      },
+
+      "termsAndConditions": {
+        "title": "Terms and Conditions"
       }
 
     }

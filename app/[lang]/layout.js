@@ -17,7 +17,9 @@ export async function generateStaticParams() {
 
 export default async function RootLayout({ children, params }) {
   // const { lang } = params;
-  const { navigation } = await getDictionary(params.lang);
+  const { navigation, privacyPolicy, termsAndConditions } = await getDictionary(
+    params.lang
+  );
 
   return (
     // <html lang="pl">
@@ -26,7 +28,11 @@ export default async function RootLayout({ children, params }) {
         {" "}
         <Providers>
           <div className="pt-28"> {children} </div>
-          <Footer />
+          <Footer
+            lang={params.lang}
+            privacyPolicy={privacyPolicy}
+            termsAndConditions={termsAndConditions}
+          />
         </Providers>{" "}
       </body>
     </html>
