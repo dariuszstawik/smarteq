@@ -2,8 +2,6 @@
 import React from "react";
 
 const MobileCard = ({ img, graphicImgClassName, hasOrangeBorder }) => {
-  // console.log("---IMG IN MOBILE CARD---");
-  // console.log(img);
   return (
     <div className="relative">
       {hasOrangeBorder && (
@@ -23,7 +21,3 @@ const MobileCard = ({ img, graphicImgClassName, hasOrangeBorder }) => {
 };
 
 export default MobileCard;
-
-// w-[345px] h-[588px]
-
-// w-[260px] h-[410px]

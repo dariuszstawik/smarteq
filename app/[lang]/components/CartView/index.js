@@ -69,7 +69,6 @@ const CartView = ({ lang }) => {
                           <span
                             className="pl-4 cursor-pointer"
                             onClick={() => {
-                              console.log("item.product", item.product);
                               dispatch(increaseCartItemAmount(item.product.id));
                             }}
                           >
@@ -164,12 +163,6 @@ const CartView = ({ lang }) => {
             >
               {lang === "pl" ? "Wyczyść koszyk" : "Clear cart"}
             </a>
-            {/* <button
-              className="inline-block w-full md:w-auto py-4 px-8 bg-orange-300 hover:bg-orange-400 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200"
-              onClick={checkout}
-            >
-              {lang === "pl" ? "zamów" : "Checkout"}
-            </button> */}
 
             <button
               className={`inline-block w-full md:w-auto py-4 px-8 ${
