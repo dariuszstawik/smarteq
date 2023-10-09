@@ -183,5 +183,3 @@ const CartView = ({ lang }) => {
 };
 
 export default CartView;
-
-// abc
