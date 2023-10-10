@@ -26,7 +26,7 @@ export default async function HorsesForSaleHeader({ lang }) {
     <section
       className=" bg-smartGray w-full  
       
-      h-[calc(100vh-112px)]
+      h-560px xl:h-[calc(100vh-112px)]
      
     mb-28 flex flex-col xl:flex-row xl:overflow-hidden"
     >

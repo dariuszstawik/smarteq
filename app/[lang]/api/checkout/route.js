@@ -19,8 +19,8 @@ export async function POST(request) {
     });
 
     const session = await stripe.checkout.sessions.create({
-      success_url: "https://smarteq.vercel.app/pl/success",
-      cancel_url: "https://smarteq.vercel.app/pl/cancel",
+      success_url: "https://smart-equestrian/pl/success",
+      cancel_url: "https://smart-equestrian/pl/cancel",
       line_items: body.lineItems,
       mode: "payment",
       shipping_address_collection: {
