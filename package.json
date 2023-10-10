@@ -16,7 +16,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "negotiator": "^0.6.3",
-    "next": "^13.4.9",
+    "next": "^13.3.1",
     "next-redux-wrapper": "^8.1.0",
     "react": "18.2.0",
     "react-awesome-slider": "^4.1.0",
@@ -32,7 +32,7 @@
     "yet-another-react-lightbox": "^3.12.0"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.37.4",
+    "@netlify/plugin-nextjs": "^4.36.1",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.26",
