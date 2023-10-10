@@ -6,18 +6,18 @@ import PageHeader from "../../components/global-components/page-header";
 import MobileCard from "../../components/main-page/mibile-card";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-export async function getStaticPaths(lang) {
-  const res = await client.getEntries({ content_type: "horseForSale" });
+// export async function getStaticPaths(lang) {
+//   const res = await client.getEntries({ content_type: "horseForSale" });
 
-  const paths = res.items.map((item) => {
-    return { params: { slug: item.fields.slug ? item.fields.slug : "" } };
-  });
+//   const paths = res.items.map((item) => {
+//     return { params: { slug: item.fields.slug ? item.fields.slug : "" } };
+//   });
 
-  return {
-    paths,
-    fallback: true,
-  };
-}
+//   return {
+//     paths,
+//     fallback: true,
+//   };
+// }
 
 // export async function generateStaticParams(): Promise<BlogPostPageParams[]> {
 // 	const blogPosts = await fetchBlogPosts({ preview: false })
