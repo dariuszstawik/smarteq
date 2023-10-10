@@ -1,9 +1,17 @@
 "use client";
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import cartFromLocalStorage, {
+  getCartFromLocalStorage,
+} from "../helpers/getCartFromLocalStorage";
 
-const initialCartState = JSON.parse(localStorage.getItem("cart"))
-  ? JSON.parse(localStorage.getItem("cart"))
-  : [];
+// const initialCartState = getCartFromLocalStorage() || [];
+
+const initialCartState = [];
+
+// localStorage.getItem("cart")
+//   ? JSON.parse(localStorage.getItem("cart"))
+//   : [];
 
 const cartSlice = createSlice({
   name: "cart",

@@ -7,10 +7,17 @@ import Hamburger from "../hamburger";
 import { ShoppingCartIcon } from "../shoppping-cart-icon";
 import { useRouter } from "next/navigation";
 import LocaleSwitcher from "../locale-switcher";
+import { addToCart } from "@/app/[lang]/GlobalRedux/store";
 
 const Navbar = ({ lang, navigation }) => {
   // const { navigation } = getDictionary(lang);
   const router = useRouter();
+
+  // useEffect(() => {
+  //   localStorage.getItem("cart")
+  //     ? dispatch(addToCart(...JSON.parse(localStorage.getItem("cart"))))
+  //     : "";
+  // }, []);
 
   const cartItems = useSelector((state) => state.cart);
 
