@@ -1,7 +1,9 @@
 "use client";
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-const initialCartState = [];
+const initialCartState = JSON.parse(localStorage.getItem("cart"))
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
 
 const cartSlice = createSlice({
   name: "cart",
