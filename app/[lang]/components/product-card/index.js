@@ -50,7 +50,7 @@ const ProductCard = ({
               {documentToReactComponents(contentfulProduct.fields.content)}
             </div>
           </div>
-          <div className="pl-4 flex gap-6 items-center justify-center">
+          <div className="pl-4 flex flex-wrap gap-6 items-center justify-center">
             <h3>
               {exercises.price} <span className="w-10" />
               <span className="text-smartOrange">
@@ -59,7 +59,7 @@ const ProductCard = ({
               </span>
             </h3>
 
-            <div className="text-xl">
+            <div className="text-lg lg:text-xl">
               <span
                 className="px-4 cursor-pointer"
                 onClick={() =>
