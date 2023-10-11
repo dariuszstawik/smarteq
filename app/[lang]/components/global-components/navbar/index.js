@@ -46,7 +46,7 @@ const Navbar = ({ lang, navigation }) => {
         >
           <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
-              href={`/${lang}/#graphicOffer`}
+              href={`/${lang}//#graphicOffer`}
               onClick={(e) => {
                 closeMobileMenu();
               }}
@@ -56,7 +56,7 @@ const Navbar = ({ lang, navigation }) => {
           </li>
           <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
-              href={`/${lang}/#ridingOffer`}
+              href={`/${lang}//#ridingOffer`}
               onClick={(e) => {
                 closeMobileMenu();
               }}
@@ -66,7 +66,7 @@ const Navbar = ({ lang, navigation }) => {
           </li>
           <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
-              href={`/${lang}/#aboutSection`}
+              href={`/${lang}//#aboutSection`}
               onClick={(e) => {
                 closeMobileMenu();
               }}
@@ -90,7 +90,7 @@ const Navbar = ({ lang, navigation }) => {
 
           <li className="uppercase text-sm text-center font-semibold text-slate-700 hover:text-slate-900 cursor-pointer">
             <Link
-              href={`/${lang}/#contactSection`}
+              href={`/${lang}//#contactSection`}
               onClick={(e) => {
                 closeMobileMenu();
               }}
