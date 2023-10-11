@@ -4,8 +4,7 @@ import ItemsToBuy from "../components/exercises-page/items-to-buy";
 import { getDictionary } from "@/lib/dictionary";
 import Navbar from "../components/global-components/navbar";
 
-export default async function page() {
-  const lang = "pl";
+export default async function page({ params: { lang } }) {
   const { navigation } = await getDictionary(lang);
   return (
     <div>

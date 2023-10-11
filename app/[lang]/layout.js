@@ -17,7 +17,7 @@ export const metadata = {
 // }
 
 export default async function RootLayout({ children, params }) {
-  const lang = "pl";
+  const lang = i18n.defaultLocale;
   const { navigation, privacyPolicy, termsAndConditions } = await getDictionary(
     params.lang
   );
