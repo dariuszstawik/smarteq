@@ -8,6 +8,7 @@ import { ShoppingCartIcon } from "../shoppping-cart-icon";
 import { useRouter } from "next/navigation";
 import LocaleSwitcher from "../locale-switcher";
 import { getDictionary } from "@/lib/dictionary";
+import LogoHomepage from "../logo-homepage";
 
 const NavbarHomepage = ({ lang, navigation }) => {
   const router = useRouter();
@@ -38,7 +39,15 @@ const NavbarHomepage = ({ lang, navigation }) => {
 
   return (
     <div className=" text-base lg:text-lg fixed w-screen h-28 flex justify-between items-center px-4 lg:px-10 xl:px-16 py-4 bg-white top-0 left-0 z-50">
-      <Logo closeMobileMenu={closeMobileMenu} lang={lang} />
+      <Link
+        href={`/${lang}/#top`}
+        onClick={(e) => {
+          closeMobileMenu();
+          handleScroll(e);
+        }}
+      >
+        <LogoHomepage closeMobileMenu={closeMobileMenu} lang={lang} />
+      </Link>
       <div className="w-full flex justify-end content-center items-center gap-4">
         <ul
           className={
