@@ -13,7 +13,8 @@ import BlogSectionHome from "./components/global-components/blog-section-home";
 import GraphicOffer from "./components/main-page/graphic-offer";
 import RidingOffer from "./components/main-page/riding-offer";
 
-export default async function Home({ params: { lang } }) {
+export default async function Home() {
+  const lang = "pl";
   const { page, navigation, contact, horsesForSale } = await getDictionary(
     lang
   );

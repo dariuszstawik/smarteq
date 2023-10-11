@@ -12,25 +12,25 @@ export const metadata = {
     "Jesteśmy grupą projektującą materiały promocyjne. Dzięki naszym realizacjom poprawisz swoją sprzedaż i będziesz wyróżniał się dobrą jakością na rynku, w którym obraca się twoja marka.",
 };
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }));
-}
+// export async function generateStaticParams() {
+//   return i18n.locales.map((locale) => ({ lang: locale }));
+// }
 
 export default async function RootLayout({ children, params }) {
-  // const { lang } = params;
+  const lang = "pl";
   const { navigation, privacyPolicy, termsAndConditions } = await getDictionary(
     params.lang
   );
 
   return (
     // <html lang="pl">
-    <html lang={params.lang}>
+    <html lang={lang}>
       <body className="min-h-screen flex flex-col max-w-full overflow-x-hidden">
         {" "}
         <Providers>
           <div className="pt-28"> {children} </div>
           <Footer
-            lang={params.lang}
+            lang={lang}
             privacyPolicy={privacyPolicy}
             termsAndConditions={termsAndConditions}
           />
