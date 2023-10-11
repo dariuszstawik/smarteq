@@ -50,7 +50,7 @@ const ProductCard = ({
               {documentToReactComponents(contentfulProduct.fields.content)}
             </div>
           </div>
-          <div className="pl-4 flex flex-wrap gap-6 items-center justify-center">
+          <div className="pl-4 flex flex-wrap gap-6 items-center justify-center pt-2">
             <h3>
               {exercises.price} <span className="w-10" />
               <span className="text-smartOrange">
