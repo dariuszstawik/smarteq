@@ -90,15 +90,21 @@ const ProductCard = ({
                         amount: productAmount,
                       })
                     )
-                  : setShowNotification(true);
+                  : // : setShowNotification(true);
+                    dispatch(
+                      increaseCartItemAmount({
+                        product: stripeProduct[0],
+                        amount: productAmount,
+                      })
+                    );
               }}
             />
           </div>
-          {showNotification && (
+          {/* {showNotification && (
             <div className="text-smartOrange text-2xl p-2 rounded">
               {exercises.alreadyInCart}
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>

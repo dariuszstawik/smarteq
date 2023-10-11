@@ -69,7 +69,12 @@ const CartView = ({ lang }) => {
                           <span
                             className="pl-4 cursor-pointer"
                             onClick={() => {
-                              dispatch(increaseCartItemAmount(item.product.id));
+                              dispatch(
+                                increaseCartItemAmount({
+                                  product: item.product,
+                                  amount: 1,
+                                })
+                              );
                             }}
                           >
                             +
