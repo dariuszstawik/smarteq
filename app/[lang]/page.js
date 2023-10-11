@@ -90,7 +90,7 @@ export default async function Home({ params: { lang } }) {
   const horsesForSaleContent = resHorsesForSale.items;
 
   return (
-    <main>
+    <main className="mt-0">
       <NavbarHomepage navigation={navigation} lang={lang} />
 
       <HeroSection lang={lang} />

@@ -27,7 +27,7 @@ export default async function ExercisesHeader({ lang }) {
     <section
       className=" bg-smartGray w-full  
       
-      h-560px xl:h-[calc(100vh-112px)]
+      h-[560px] xl:h-[calc(100vh-112px)]
      
      flex flex-col xl:flex-row xl:overflow-hidden"
     >
