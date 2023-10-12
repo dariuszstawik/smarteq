@@ -3,6 +3,7 @@ import React from "react";
 import SectionTitle from "../../global-components/section-title";
 import { client } from "@/lib/contentful/client";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Image from "next/image";
 
 export default async function GraphicOffer({ lang }) {
   const { graphicOffer } = await getDictionary(lang);
@@ -44,8 +45,10 @@ export default async function GraphicOffer({ lang }) {
 
         <div className="mx-10 md:mx-28 ">
           <ul>
-            <img
+            <Image
               src="/contact-image.svg"
+              width="810"
+              height="585"
               className="md:w-[400px] float-right hidden xl:block"
               alt="contact-image"
             />
@@ -65,8 +68,10 @@ export default async function GraphicOffer({ lang }) {
               </li>
             ))}
           </ul>
-          <img
+          <Image
             src="/contact-image.svg"
+            width="810"
+            height="585"
             className="md:w-[400px] xl:hidden"
             alt="contact-image"
           />

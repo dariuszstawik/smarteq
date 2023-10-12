@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../global-components/buttton";
 import { client } from "@/lib/contentful/client";
 import HeaderSlider from "../../global-components/header-slider";
+import Image from "next/image";
 
 export default async function ExercisesHeader({ lang }) {
   let contentfulLang;
@@ -32,8 +33,10 @@ export default async function ExercisesHeader({ lang }) {
      flex flex-col xl:flex-row xl:overflow-hidden"
     >
       <div>
-        <img
+        <Image
           src="/asset-about2bg.svg"
+          width="215"
+          height="185"
           alt="asset"
           className="my-10 mb-2 ml-auto mr-14 w-32"
         />

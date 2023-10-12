@@ -2,6 +2,7 @@ import { client } from "@/lib/contentful/client";
 import { getDictionary } from "@/lib/dictionary";
 import SectionTitle from "../../global-components/section-title";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Image from "next/image";
 
 export default async function RidingOffer({ lang }) {
   const { ridingOffer } = await getDictionary(lang);
@@ -43,8 +44,10 @@ export default async function RidingOffer({ lang }) {
 
         <div className="mx-10 md:mx-28 ">
           <ul>
-            <img
+            <Image
               src="horse-jumping.svg"
+              width="352"
+              height="292"
               alt="horse jumping"
               className="md:w-[300px] float-right hidden xl:block"
             />
@@ -64,8 +67,10 @@ export default async function RidingOffer({ lang }) {
               </li>
             ))}
           </ul>
-          <img
+          <Image
             src="horse-jumping.svg"
+            width="352"
+            height="292"
             alt="horse jumping"
             className="md:w-[300px] xl:hidden"
           />

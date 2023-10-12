@@ -2,6 +2,7 @@ import React from "react";
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import MobileCard from "../mibile-card";
+import Image from "next/image";
 
 const AboutSecond = ({ about2 }) => {
   return (
@@ -9,18 +10,21 @@ const AboutSecond = ({ about2 }) => {
       className="relative w-full lg:h-[calc(100vh-112px)] mt-32 pb-20 bg-smartGray"
       id="aboutSection"
     >
-      <img
+      <Image
         src="/asset-about2bg.svg"
+        width="215"
+        height="185"
         alt="asset"
         className="hidden xl:block absolute w-32 top-16 right-24"
       />
       <section className="container mx-auto">
         <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row justify-center gap-12 lg:gap-28 xl:gap-20">
           <div className="max-w-md">
-            <img
+            <Image
               src="/asset-about2phone.svg"
               alt="asset"
-              width="110px"
+              width="110"
+              height="94"
               className="ml-56 translate-y-[55%]"
             />
             <MobileCard

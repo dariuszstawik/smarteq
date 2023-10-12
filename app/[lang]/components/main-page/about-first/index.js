@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import MobileCard from "../mibile-card";
 import SectionTitle from "../../global-components/section-title";
 import { getDictionary } from "@/lib/dictionary";
+import Image from "next/image";
 
 export default async function AboutFirst({ about1, lang }) {
   const { aboutSection } = await getDictionary(lang);
@@ -13,9 +14,10 @@ export default async function AboutFirst({ about1, lang }) {
         <SectionTitle>{aboutSection.title}</SectionTitle>
         <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row justify-center gap-8 lg:gap-28">
           <div className="max-w-md">
-            <img
+            <Image
               src="/asset-about1.svg"
-              height="106px"
+              width="167"
+              height="106"
               alt="asset"
               className="ml-auto lg:translate-x-20"
             />

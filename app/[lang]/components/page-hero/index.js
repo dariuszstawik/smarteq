@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../global-components/buttton";
+import Image from "next/image";
 
 const PageHero = ({ title, titleSpan, content, buttonContent, img }) => {
   return (
@@ -11,8 +12,10 @@ const PageHero = ({ title, titleSpan, content, buttonContent, img }) => {
     mb-28 flex flex-col xl:flex-row justify-between xl:overflow-hidden"
     >
       <div>
-        <img
+        <Image
           src="/asset-about2bg.svg"
+          width="215"
+          height="185"
           alt="asset"
           className=" m-8-10 ml-auto w-32"
         />

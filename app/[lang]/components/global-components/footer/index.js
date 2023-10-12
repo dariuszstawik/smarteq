@@ -2,6 +2,7 @@
 import React from "react";
 import Logo from "../logo";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = ({ lang, privacyPolicy, termsAndConditions }) => {
   return (
@@ -10,11 +11,19 @@ const Footer = ({ lang, privacyPolicy, termsAndConditions }) => {
         <Logo />
         <div className="flex flex-wrap gap-6 justify-center items-center">
           <a href="https://www.facebook.com/smartequestrain/" target="_blank">
-            <img src="/fb-icon.svg" alt="facebook" className="w-10 h-10" />
+            <Image
+              src="/fb-icon.svg"
+              width="64"
+              height="64"
+              alt="facebook"
+              className="w-10 h-10"
+            />
           </a>
           <a href="https://www.facebook.com/smartequestrain/" target="_blank">
-            <img
+            <Image
               src="/messenger-icon.svg"
+              width="64"
+              height="64"
               alt="messenger"
               className="w-10 h-10"
             />
@@ -23,36 +32,54 @@ const Footer = ({ lang, privacyPolicy, termsAndConditions }) => {
             href="https://www.instagram.com/smart_equestrian_/"
             target="_blank"
           >
-            <img
+            <Image
               src="/instagram-icon.svg"
+              width="64"
+              height="64"
               alt="instagram"
               className="w-10 h-10"
             />
           </a>
           <a href="https://wa.me/48605820340" target="_blank">
-            <img
+            <Image
               src="/whatsapp-icon.svg"
+              width="64"
+              height="64"
               alt="whatsapp"
               className="w-10 h-10"
             />
           </a>
 
           <a href="https://www.tiktok.com/@smart_equestrian" target="_blank">
-            <img src="/tiktok-icon.svg" alt="tiktok" className="w-10 h-10" />
+            <Image
+              src="/tiktok-icon.svg"
+              width="64"
+              height="64"
+              alt="tiktok"
+              className="w-10 h-10"
+            />
           </a>
 
           <a
             href="https://www.youtube.com/@smartequestrian3953"
             target="_blank"
           >
-            <img src="/yb-icon.svg" alt="youtube" className="w-10 h-10" />
+            <Image
+              src="/yb-icon.svg"
+              width="64"
+              height="64"
+              alt="youtube"
+              className="w-10 h-10"
+            />
           </a>
           <a
             href="https://www.linkedin.com/company/smart-equestrian/"
             target="_blank"
           >
-            <img
+            <Image
               src="/linkedin-icon.svg"
+              width="64"
+              height="64"
               alt="linkedin"
               className="w-10 h-10"
             />

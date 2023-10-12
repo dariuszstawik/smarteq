@@ -3,6 +3,7 @@ import ButtonLg from "../../global-components/buttonLg";
 import { getDictionary } from "@/lib/dictionary";
 import SectionTitle from "../../global-components/section-title";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function OfferSection({ lang }) {
   const { equestrianOffer } = await getDictionary(lang);
@@ -24,11 +25,11 @@ export default async function OfferSection({ lang }) {
                 </ButtonLg>
               </Link>
             </div>
-            <img
+            <Image
               src="woman-img.svg"
               alt="woman graphic"
-              width="113px"
-              height="196px"
+              width="113"
+              height="196"
               className="lg:self-start mx-auto lg:ml-32"
             />
           </div>
@@ -36,11 +37,11 @@ export default async function OfferSection({ lang }) {
           <div className="relative flex flex-col w-full">
             <div className="flex flex-col justify-center items-center content-center">
               <div className=" mx-auto lg:ml-0 flex justify-center lg:max-h-[292px] w-1/2">
-                <img
+                <Image
                   src="horse-jumping.svg"
                   alt="horse jumping"
-                  width="246px"
-                  height="204px"
+                  width="246"
+                  height="204"
                   className=""
                 />
               </div>
@@ -53,11 +54,11 @@ export default async function OfferSection({ lang }) {
               </div>
               <div className="h-[196px] hidden lg:block" />
             </div>
-            <img
+            <Image
               src="asset-circle1.svg"
               alt="asset-circle"
-              width="155px"
-              height="137px"
+              width="155"
+              height="137"
               className="hidden absolute top-[26%] right-20"
             />
           </div>

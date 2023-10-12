@@ -2,13 +2,15 @@ import React from "react";
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import MobileCard from "../mibile-card";
+import Image from "next/image";
 
 const AboutThird = ({ about3 }) => {
   return (
     <div className="relative w-full lg:h-[calc(100vh-112px)] mt-20 pb-20">
-      <img
+      <Image
         src="/asset-about3.svg"
-        width="110px"
+        width="110"
+        height="110"
         alt="asset"
         className="absolute top-10 right-72"
       />

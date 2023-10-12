@@ -2,28 +2,37 @@ import React from "react";
 import Button from "../../global-components/buttton";
 import Link from "next/link";
 import { getDictionary } from "@/lib/dictionary";
+import Image from "next/image";
 
 export default async function HeroSection({ lang }) {
   const { heroSection } = await getDictionary(lang);
   return (
     <section className="relative bg-smartGray w-full h-560px xl:h-[calc(100vh-112px)] xl:min-h-[715px] overflow-x-hidden">
-      <img
+      <Image
         src="/asset-about2bg.svg"
+        width="215"
+        height="185"
         className="w-32 hidden md:block md:absolute top-[10%] left-[50%] -translate-x-[50%] z-50"
       />
 
-      <img
+      <Image
         src="/hero-asset-gray-circle.svg"
+        width="150"
+        height="150"
         className="w-32 hidden md:block md:absolute bottom-[20%] left-[8%]"
       />
 
-      <img
+      <Image
         src="/hero-asset-circles.svg"
+        width="208"
+        height="132"
         className="w-32 hidden md:block md:absolute bottom-[20%] left-[38%]"
       />
 
-      <img
+      <Image
         src="/hero-asset-horse.svg"
+        width="1625"
+        height="850"
         className="hidden ml-[10%] max-w-[60%] tall:max-w-[80%] md:block md:absolute bottom-0 right-0 z-30"
       />
 
@@ -52,7 +61,12 @@ export default async function HeroSection({ lang }) {
               {heroSection.subtitle}
             </p>
           </div>
-          <img src="/hero-asset-horse.svg" className="md:hidden" />
+          <Image
+            src="/hero-asset-horse.svg"
+            width="1625"
+            height="850"
+            className="md:hidden"
+          />
         </div>
       </div>
     </section>
