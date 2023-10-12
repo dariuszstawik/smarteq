@@ -51,7 +51,6 @@ export default async function ExercisesHeader({ lang }) {
           <p className="lg:text-lg text-left mt-0">
             {exercisesHeader.fields.headerContent}
           </p>
-          {/* <Button className="mx-auto mt-2">Check my e-books</Button> */}
         </div>
       </div>
 

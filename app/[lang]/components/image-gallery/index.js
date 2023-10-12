@@ -22,7 +22,6 @@ export default function ImageGallery({ lang, content }) {
       <PhotoAlbum
         layout="rows"
         photos={images}
-        // onClick={({ index: current }) => setIndex(current)}
         renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
           <Link
             href={`/${lang}/horse-for-sale/${photo.slug}`}
@@ -34,13 +33,6 @@ export default function ImageGallery({ lang, content }) {
           </Link>
         )}
       />
-
-      {/* <Lightbox
-        index={index}
-        slides={photos}
-        open={index >= 0}
-        close={() => setIndex(-1)}
-      /> */}
     </div>
   );
 }
