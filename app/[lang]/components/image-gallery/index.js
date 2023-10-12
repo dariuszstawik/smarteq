@@ -27,7 +27,7 @@ export default function ImageGallery({ lang, content }) {
           <Link
             href={`/${lang}/horse-for-sale/${photo.slug}`}
             style={wrapperStyle}
-            target="_blank"
+            // target="_blank"
             rel="noreferrer noopener"
           >
             {renderDefaultPhoto({ wrapped: true })}
