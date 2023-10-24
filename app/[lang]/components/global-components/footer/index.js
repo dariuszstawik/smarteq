@@ -87,7 +87,7 @@ const Footer = ({ lang, privacyPolicy, termsAndConditions }) => {
             </a>
           </div>
         </div>
-        <div className="mx-auto mt-6">
+        <div className="mx-auto mt-6 text-sm lg:text-base">
           <Link className="p-4" href={`/${lang}/privacy-policy`}>
             {privacyPolicy.title}
           </Link>
@@ -96,7 +96,7 @@ const Footer = ({ lang, privacyPolicy, termsAndConditions }) => {
           </Link>
         </div>
       </div>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center text-sm lg:text-base">
         <p className="mx-auto text-center">
           © 2023 Smart Equestrian. Created by Smart Equestrian &
           <a href="https://stronyjaksiepatrzy.pl" className="text-primaryGreen">
