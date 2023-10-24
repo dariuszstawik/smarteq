@@ -87,7 +87,7 @@ const Footer = ({ lang, privacyPolicy, termsAndConditions }) => {
             </a>
           </div>
         </div>
-        <div className="mx-auto mt-6 text-sm lg:text-base">
+        <div className="mx-auto mt-6 text-sm lg:text-base flex flex-col justify-center items-center md:flex-row">
           <Link className="p-4" href={`/${lang}/privacy-policy`}>
             {privacyPolicy.title}
           </Link>
