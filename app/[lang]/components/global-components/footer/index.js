@@ -103,15 +103,7 @@ const Footer = ({ lang, privacyPolicy, termsAndConditions }) => {
             {" "}
             Strony jak się patrzy
           </a>
-          {/* All rights reserved. */}
         </p>
-
-        {/* <p className="text-sm mx-auto text-center">
-          Created by Smart Equestrian &
-          <a href="https://stronyjaksiepatrzy.pl" className="text-primaryGreen">
-            Strony jak się patrzy
-          </a>
-        </p> */}
       </div>
     </section>
   );

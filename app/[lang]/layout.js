@@ -7,7 +7,7 @@ import { getDictionary } from "@/lib/dictionary";
 export const metadata = {
   title: "Smart Equestrian",
   description:
-    "Jesteśmy grupą projektującą materiały promocyjne. Dzięki naszym realizacjom poprawisz swoją sprzedaż i będziesz wyróżniał się dobrą jakością na rynku, w którym obraca się twoja marka.",
+    "Smart Equestrian: jesteśmy grupą projektującą materiały promocyjne. Dzięki naszym realizacjom poprawisz swoją sprzedaż i będziesz wyróżniał się dobrą jakością na rynku, w którym obraca się twoja marka.",
 };
 
 // export async function generateStaticParams() {

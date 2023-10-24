@@ -12,11 +12,10 @@ import NavbarHomepage from "./components/global-components/navbar-homepage";
 import BlogSectionHome from "./components/global-components/blog-section-home";
 import GraphicOffer from "./components/main-page/graphic-offer";
 import RidingOffer from "./components/main-page/riding-offer";
+import Head from "next/head";
 
 export default async function Home({ params: { lang } }) {
-  const { page, navigation, contact, horsesForSale } = await getDictionary(
-    lang
-  );
+  const { navigation, contact } = await getDictionary(lang);
 
   let contentfulLang;
 
@@ -90,28 +89,38 @@ export default async function Home({ params: { lang } }) {
   const horsesForSaleContent = resHorsesForSale.items;
 
   return (
-    <main className="mt-0">
-      <NavbarHomepage navigation={navigation} lang={lang} />
+    <>
+      <Head>
+        <title>Smart Equestrian</title>
+        <meta
+          name="description"
+          content="Smart Equestrian: jesteśmy grupą projektującą materiały promocyjne. Dzięki naszym realizacjom poprawisz swoją sprzedaż i będziesz wyróżniał się dobrą jakością na rynku, w którym obraca się twoja marka."
+        />
+      </Head>
 
-      <HeroSection lang={lang} />
+      <main className="mt-0">
+        <NavbarHomepage navigation={navigation} lang={lang} />
 
-      <BlogSectionHome content={blogPost} lang={lang} />
+        <HeroSection lang={lang} />
 
-      <OfferSection lang={lang} />
+        <BlogSectionHome content={blogPost} lang={lang} />
 
-      <AboutFirst about1={about1} lang={lang} />
+        <OfferSection lang={lang} />
 
-      <AboutSecond about2={about2} />
+        <AboutFirst about1={about1} lang={lang} />
 
-      <AboutThird about3={about3} />
+        <AboutSecond about2={about2} />
 
-      <AboutFourth about4={about4} />
+        <AboutThird about3={about3} />
 
-      <GraphicOffer lang={lang} />
+        <AboutFourth about4={about4} />
 
-      <RidingOffer lang={lang} />
+        <GraphicOffer lang={lang} />
 
-      <ContactForm contact={contact} />
-    </main>
+        <RidingOffer lang={lang} />
+
+        <ContactForm contact={contact} />
+      </main>
+    </>
   );
 }
