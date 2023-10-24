@@ -1,8 +1,6 @@
 import "./globals.css";
 import { i18n } from "@/i18n.config";
-
 import { Providers } from "./GlobalRedux/provider";
-import Navbar from "./components/global-components/navbar";
 import Footer from "./components/global-components/footer";
 import { getDictionary } from "@/lib/dictionary";
 
@@ -18,12 +16,11 @@ export const metadata = {
 
 export default async function RootLayout({ children, params }) {
   const lang = i18n.defaultLocale;
-  const { navigation, privacyPolicy, termsAndConditions } = await getDictionary(
+  const { privacyPolicy, termsAndConditions } = await getDictionary(
     params.lang
   );
 
   return (
-    // <html lang="pl">
     <html lang={lang}>
       <body
         className="min-h-screen flex flex-col max-w-full overflow-x-hidden mt-0"
