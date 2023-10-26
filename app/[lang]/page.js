@@ -15,7 +15,7 @@ import RidingOffer from "./components/main-page/riding-offer";
 import Head from "next/head";
 
 export default async function Home({ params: { lang } }) {
-  const { navigation, contact } = await getDictionary(lang);
+  const { navigation, contact, metadata } = await getDictionary(lang);
 
   let contentfulLang;
 
@@ -92,10 +92,7 @@ export default async function Home({ params: { lang } }) {
     <>
       <Head>
         <title>Smart Equestrian</title>
-        <meta
-          name="description"
-          content="Smart Equestrian: jesteśmy grupą projektującą materiały promocyjne. Dzięki naszym realizacjom poprawisz swoją sprzedaż i będziesz wyróżniał się dobrą jakością na rynku, w którym obraca się twoja marka."
-        />
+        <meta name="description" content={metadata.description} />
       </Head>
 
       <main className="mt-0">

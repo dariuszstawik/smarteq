@@ -1,4 +1,9 @@
 {
+  "metadata": {
+  "title": "Smart Equestrian",
+  "description": "Materiały graficzne i marketingowe nie tylko dla firm z branży jeździeckiej"
+  },
+
     "navigation": {
       "graphicOffer": "Oferta graficzna",
       "ridingOffer": "Oferta jeździecka",
@@ -25,6 +30,11 @@
       "button": "czytaj więcej"
     },
 
+    "blogPage": {
+"title": "Smart Equestrian: blog",
+"description": "Smart Equestrian: blog. Jeździectwo, grafika i marketing"
+    },
+
     "equestrianOffer": {
       "title": "Oferta jeździecka",
       "paragraph": "Naszym konikiem jest jeździectwo. Zdecydowana większość osób, z którymi tworzymy naszą markę jest pochłonięta przez świat jeździecki. Zajmujemy się sprzedażą oraz pomocą w doborze odpowiedniego konia, treningiem koni, treningiem jeźdźców, prowadzimy wykłady oraz szkolenia w zakresie nauki jazdy konnej na poziomie średniozaawansowanym. Nowością w naszej ofercie są Smart Plany połączone z innowacyjnym programem nauczania jazdy konnej.",
@@ -42,6 +52,7 @@
 
     "contact": {
       "title": "Kontakt",
+      "description": "Smart Equestrian: informacje kontaktowe. Materiały graficzne i marketingowe nie tylko dla firm z branży jeździeckiej",
       "firstName": "Imię",
       "lastName": "Nazwisko",
       "email": "E-mail",
@@ -53,6 +64,8 @@
     },
 
     "exercises": {
+      "title": "Smart Equestrian: polepsz swoją technikę jazdy",
+      "description": "Smart Equestrian: Smart Plany połączone z innowacyjnym programem nauczania jazdy konnej",
       "price": "Cena:",
       "button": "Dodaj do koszyka",
       "alreadyInCart": "Produkt już jest w koszyku"
@@ -60,6 +73,7 @@
 
     "horsesForSale": {
       "title": "Konie na sprzedaż",
+      "description": "Smart Equestrian: konie i kuce na sprzedaż - wyselekcjonowana grupa przyszłościowych koni, objęta profesjonalnym treningiem",
       "title2": "Pozostałe konie",
       "contact": "Kontakt"
     },

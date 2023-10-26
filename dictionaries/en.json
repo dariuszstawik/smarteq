@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Smart Equestrian",
+    "description": "Smart Equestrian: Graphic and marketing materials not only for equestrian companies"
+    },
+
     "navigation": {
       "graphicOffer": "Graphic offer",
       "ridingOffer": "Riding offer",
@@ -25,6 +30,11 @@
         "button": "Read more"
       },
 
+      "blogPage": {
+        "title": "Smart Equestrian: blog",
+        "description": "Equestrian, graphic design and marketing"
+            },
+
       "equestrianOffer": {
         "title": "Equestrian offer",
         "paragraph": "Our hobby is horse riding. The vast majority of people with whom we create our brand are absorbed by the equestrian world. We sell and help in selecting the right horse, horse training, rider training, we conduct lectures and training in horse riding at an intermediate level. New in our offer are Smart Plans combined with an innovative horse riding teaching program.",
@@ -42,6 +52,7 @@
 
       "contact": {
         "title": "Contact",
+        "description": "Smart Equestrian: contact information. Graphic and marketing materials not only for equestrian companies",
         "firstName": "First name",
         "lastName": "Last name",
         "email": "E-mail",
@@ -54,6 +65,8 @@
 
 
       "exercises": {
+        "title": "Smart Equestrian: Improve your driving technique",
+        "description": "Smart Equestrian: Smart Plans combined with an innovative horse riding teaching program",
         "price": "Price",
         "button": "Add to cart",
         "alreadyInCart": "Product is already in the cart"
@@ -61,6 +74,7 @@
 
       "horsesForSale": {
         "title": "Horses for sale",
+        "description": "Smart Equestrian: horses and ponies for sale - selected group of future-oriented horses undergoing professional training",
         "title2": "Other horses",
         "contact": "Contact"
       },

@@ -4,6 +4,7 @@ import SingleArticle from "../../components/global-components/single-article";
 import Navbar from "../../components/global-components/navbar";
 import { getDictionary } from "@/lib/dictionary";
 import PageHeader from "../../components/global-components/page-header";
+import Head from "next/head";
 
 async function getContentfulBlogPosts(contentfulLang, slug) {
   const blogPosts = await client.getEntries(
@@ -34,15 +35,21 @@ export default async function BlogPost({ params }) {
   const blogPost = await getContentfulBlogPosts(contentfulLang, slug);
 
   return (
-    <div>
-      <Navbar navigation={navigation} lang={params.lang} />
-      <PageHeader>Blog</PageHeader>
-      <SingleArticle
-        title={blogPost.fields.title}
-        lead={blogPost.fields.lead}
-        content={blogPost.fields.content}
-        img={blogPost.fields.image ? blogPost.fields.image : ""}
-      ></SingleArticle>
-    </div>
+    <>
+      <Head>
+        <title>{blogPost.fields.title} : Smart Equestrian</title>
+        <meta name="description" content={blogPost.fields.lead} />
+      </Head>
+      <div>
+        <Navbar navigation={navigation} lang={params.lang} />
+        <PageHeader>Blog</PageHeader>
+        <SingleArticle
+          title={blogPost.fields.title}
+          lead={blogPost.fields.lead}
+          content={blogPost.fields.content}
+          img={blogPost.fields.image ? blogPost.fields.image : ""}
+        ></SingleArticle>
+      </div>
+    </>
   );
 }

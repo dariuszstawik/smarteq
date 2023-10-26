@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/dictionary";
 import HorsesForSaleHeader from "../components/horses-for-sale-page/horses-for-sale-header";
 import ImageGallery from "../components/image-gallery";
 import { client } from "@/lib/contentful/client";
+import Head from "next/head";
 
 async function getContentfulHorsesForSale(contentfulLang) {
   const resHorsesForSale = await client.getEntries(
@@ -34,12 +35,19 @@ export default async function page({ params: { lang } }) {
   const horsesForSaleContent = await getContentfulHorsesForSale(contentfulLang);
 
   return (
-    <div>
-      <Navbar navigation={navigation} lang={lang} />
-      <HorsesForSaleHeader lang={lang} />
-      <HorsesToSell lang={lang} />
-      <h2 className="m-10 lg:-mt-8 lg:pl-40">{horsesForSale.title2}</h2>
-      <ImageGallery lang={lang} content={horsesForSaleContent} />
-    </div>
+    <>
+      <Head>
+        <title>{horsesForSale.title}</title>
+        <meta name="description" content={horsesForSale.description} />
+      </Head>
+
+      <div>
+        <Navbar navigation={navigation} lang={lang} />
+        <HorsesForSaleHeader lang={lang} />
+        <HorsesToSell lang={lang} />
+        <h2 className="m-10 lg:-mt-8 lg:pl-40">{horsesForSale.title2}</h2>
+        <ImageGallery lang={lang} content={horsesForSaleContent} />
+      </div>
+    </>
   );
 }
